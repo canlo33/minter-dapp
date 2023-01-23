@@ -1,217 +1,622 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>CodeCats</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+<head>
 
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/x-icon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/x-icon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/x-icon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/x-icon/site.webmanifest" />
-    <link rel="stylesheet" href="css/three-dots.min.css" />
-    <link rel="stylesheet" href="css/splide.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <a href="/">
-            <img src="images/x-icon/favicon-32x32.png" alt="logo" />
-          </a>
-        </div>
-        <div class="menu">
-          <a
-            href="https://discord.gg/A9CnsVzzkZ"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/header/discord.webp" alt="Discord" />
-          </a>
-          <a
-            href="https://twitter.com/codeSTACKr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/header/twitter.webp" alt="Twitter" />
-          </a>
-          <a
-            href="https://opensea.io/collection/codecats"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/header/opensea.webp" alt="Opensea" />
-          </a>
-          <button class="wallet-btn btn" id="connectWallet">
-            <span>Connect Wallet</span>
-          </button>
-        </div>
-      </div>
-    </header>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <section class="container not-connected">
-      <div>
-        <h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
-        <h1 id="welcomeH1">Welcome to the CodeCats NFT Project!</h1>
-        <p id="welcomeP">
-          The CodeCats NFT Project is a decentralized, open-source project that aims to demonstrate how to develope and launch your own NFT Collection. Follow step by step on the <a href="https://youtube.com/codestackr"  target="_blank" rel="noopener noreferrer">codeSTACKr</a> YouTube channel.
-        </p>
-      </div>
-    </section>
+<meta name="description" content="Hold Up Society">
+<meta name="author" content="Frenify">
 
-    <section class="container">
-      <div class="countdown card">
-        <div id="countdown">
-          <ul class="count-down" data-date="">
-            <li class="clock-item">
-              <span class="count-number days">20</span>
-              <p class="count-text">Days</p>
-            </li>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-            <li class="clock-item">
-              <span class="count-number hours">20</span>
-              <p class="count-text">Hour</p>
-            </li>
+<title>Hold Up Society | Home</title>
 
-            <li class="clock-item">
-              <span class="count-number minutes">20</span>
-              <p class="count-text">Min</p>
-            </li>
+<link rel="manifest" href="images/x-icon/site.webmanifest" />
 
-            <li class="clock-item">
-              <span class="count-number seconds">20</span>
-              <p class="count-text">Sec</p>
-            </li>
-          </ul>
-          <h2 id="subHeading">Pre-Sale Countdown</h2>
-        </div>
-        <h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
-        <p id="mainText">
-          A new batch of cute cats will be available very soon!
-        </p>
-        <a
-          id="actionButton"
-          href="https://discord.gg/A9CnsVzzkZ"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hero-btn btn"
-          ><span>Join the Catmmunity</span>
-        </a>
-        <div id="mintContainer" class="mint-container hidden">
-          <div class="info-container">
-            <div>
-              <h3>Supply</h3>
-              <p id="totalSupply">100</p>
-            </div>
-            <div>
-              <h3>Price Per Mint</h3>
-              <p id="pricePerMint">1 ETH</p>
-            </div>
-            <div>
-              <h3>Max</h3>
-              <p id="maxPerMint">5 per wallet</p>
-            </div>
-          </div>
-          <div class="mint-qty">
-            <span>
-              <button class="input-number-decrement btn" id="mintDecrement">–</button>
-              <input
-                id="mintInput"
-                class="input-number btn"
-                type="number"
-                value="1"
-                min="1"
-                max="5"
-              />
-              <button class="input-number-increment btn" id="mintIncrement">+</button>
-            </span>
-            <button id="setQtyMax" class="btn">SET MAX</button>
-          </div>
-          <div class="total-price-container">
-            <h3>Total</h3>
-            <p id="totalPrice">.001 ETH</p>
-          </div>
-          <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
-        </div>
-      </div>
-      <div class="minted-container card show-card hidden">
-        <h1>🎉</h1>
-        <h2>Minted!</h2>
-        <p>Here's your trasaction link:</p>
-        <a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer">
-          <button class="hero-btn btn">View Transaction</button>
-        </a>
-        <p>View it in the collection:</p>
-        <a
-          id="mintedLinkBtn"
-          href="https://testnets.opensea.io/collection/teststackr-collection"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button class="hero-btn btn">View Collection</button>
-        </a>
-      </div>
-    </section>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- !Google Fonts -->
 
-    <div id="spinner" class="dot-spin"></div>
+<!-- Styles -->
+<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+<link type="text/css" rel="stylesheet" href="css/plugins.css?ver=6.0" />
+<link type="text/css" rel="stylesheet" href="css/style.css?ver=6.0" />
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js?ver=6.0"></script> <![endif]-->
+<!-- !Styles -->
 
-    <div class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/slider/0.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/1.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/2.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/3.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/4.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/5.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/6.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/7.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/8.png" />
-          </li>
-        </ul>
-      </div>
-    </div>
+</head>
 
-    <script src="js/metamask-onboarding.bundle.js"></script>
-    <script src="js/web3.min.js"></script>
-    <script src="js/splide.min.js"></script>
-    <script src="js/constants.js"></script>
-    <script src="js/abi.js"></script>
-    <script src="js/countdown.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+<body>	
+	<!-- Nav -->
+	<!-- BG -->
+	<div class="video_bg">
+			<img src="img/bg.png" style="height:100%; width:100%;"></img>
+	</div>
+	<!-- !BG -->
+	<div class="nav">
+		<a href="/">
+		  <img class="nav-logo-image" src="img/logo.png"/>
+		</a>
+		<a href="#Home" class="nav-item">HOME</a>
+		<a href="#Faq" class="nav-item">FAQ</a>
+		<div style="flex: 1 1 0%;"></div>
+		<a href="#MINT" class="nav-item">MINT</a>
+		<a>
+      <button class="wallet-btn" id="connectWallet">
+        <span>Connect Wallet</span>
+      </button>
+    </a>
+	</div>
+	<!-- !Nav -->
+	<!-- Content -->
+	<div style="height:700px;"></div>
+	<div class="metaportal_fn_content">
+	
+	<!-- Section About #2 -->
+		<section id="about2">
+			
+			<div class="container small">
+			
+				<div class="fn_cs_shortabout">
+					<div class="about_left">
+						<h3 class="fn__maintitle" data-text="Hodl Up Society">Hodl Up Society</h3>
+						<div class="fn_cs_divider">
+							<div class="divider">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<div class="desc">
+							<p>As the first hero of Hodl Up Society, collection has over 9,999 unique skins drawn from the different missions and challenges he faced throughout his life.</p>
+							<p>The artwork has been hand-drawned by a Canadian Artist in the traditional anime style and composited by Layla Efiyo.</p>
+						</div>
+						<a href="https://discord.com/" class="metaportal_fn_button" target="_blank"><span>Join us On Discord</span></a>
+					</div>
+					<div class="about_right">
+						<video src="img/slide_video.mp4" type="video/mp4" width="100%" height="100%" controls muted autoplay loop>
+						</video>
+
+					</div>
+				</div>
+				
+				
+				<div class="fn_cs_collection_info">
+					<h3 class="fn__gradient_title">10,000</h3>
+					<h3 class="fn__maintitle upper" data-text="Total Items in Collection">Total Items in Collection</h3>
+					<p>There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				</div>
+				
+			</div>		
+			
+			<div class="container">
+			
+				<!-- Steps Shortcode -->
+				<div class="fn_cs_steps gap" data-cols="4" data-gap="60" style="padding-top: 50px;">
+					<ul>
+						<li>
+							<div class="item">
+								<div class="item_in">
+									<h3 class="fn__gradient_title">01</h3>
+									<p>Connect your Wallet</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<div class="item_in">
+									<h3 class="fn__gradient_title">02</h3>
+									<p>Select Your Quantity</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<div class="item_in">
+									<h3 class="fn__gradient_title">03</h3>
+									<p>Confirm The Transaction</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<div class="item_in">
+									<h3 class="fn__gradient_title">04</h3>
+									<p>Receive Your NFT’s</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- !Steps Shortcode -->
+				
+				
+				<div class="fn_cs_join">
+					<div class="join_in">
+						<h3 class="fn__maintitle upper" data-text="Join Our Community">Join Our Community</h3>
+						<p>There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+						<div class="buttons">
+							<a href="https://opensea.io/" class="metaportal_fn_button" target="_blank"><span>Buy On Opensea</span></a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+		</section>
+		<!-- !Section About #2 -->
+
+		<!-- Section Divider -->
+		<div class="fn_cs_section_divider">
+			<div class="divider">
+				<span class="short"></span>
+				<span class="long"></span>
+				<span class="short"></span>
+			</div>
+		</div>
+		<!-- !Section Divider -->	
+		<div class="container">
+				<div style="height:40px;"></div>
+				<h3 class="fn__maintitle big" data-text="Hodl Up Society" data-align="center">Hodl Up Society</h3>
+							
+				<!-- Slider -->
+				<div class="fn_cs_slider" data-responsive="on">
+					<div class="slider_top">
+						<img src="img/1x1.jpg" alt="">
+						<ul>
+							<li class="prev" data-index="1">
+								<div class="item">
+									<img src="img/1x1.jpg" alt="">
+									<div class="item_in">
+										<div class="img" data-bg-img="img/slider/1.jpg"></div>
+									</div>
+								</div>
+							</li>
+							<li class="active" data-index="2">
+								<div class="item">
+									<img src="img/1x1.jpg" alt="">
+									<div class="item_in">
+										<div class="img" data-bg-img="img/slider/2.jpg"></div>
+									</div>
+								</div>
+							</li>
+							<li class="next" data-index="3">
+								<div class="item has_video">
+									<img src="img/1x1.jpg" alt="">
+									<a class="popup-youtube metaportal_fn_videobutton" href="https://www.youtube.com/watch?v=7e90gBu4pas">
+										<img src="svg/play.svg" alt="" class="fn__svg">
+									</a>
+									<div class="item_in">
+										<div class="img" data-bg-img="img/slider/3.jpg"></div>
+									</div>
+								</div>
+							</li>
+							<li class="next2" data-index="4">
+								<div class="item">
+									<img src="img/1x1.jpg" alt="">
+									<div class="item_in">
+										<div class="img" data-bg-img="img/slider/4.jpg"></div>
+									</div>
+								</div>
+							</li>
+							<li data-index="5">
+								<div class="item">
+									<img src="img/1x1.jpg" alt="">
+									<div class="item_in">
+										<div class="img" data-bg-img="img/slider/5.jpg"></div>
+									</div>
+								</div>
+							</li>
+							<li data-index="6">
+								<div class="item">
+									<img src="img/1x1.jpg" alt="">
+									<div class="item_in">
+										<div class="img" data-bg-img="img/slider/6.jpg"></div>
+									</div>
+								</div>
+							</li>
+							<li class="prev2" data-index="7">
+								<div class="item">
+									<img src="img/1x1.jpg" alt="">
+									<div class="item_in">
+										<div class="img" data-bg-img="img/slider/7.jpg"></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slider_nav">
+						<a href="#" class="prev">
+							<span class="circle"></span>
+							<span class="icon"><img src="svg/down.svg" alt="" class="fn__svg"></span>
+							<span class="circle"></span>
+						</a>
+						<a href="#" class="next">
+							<span class="circle"></span>
+							<span class="icon"><img src="svg/down.svg" alt="" class="fn__svg"></span>
+							<span class="circle"></span>
+						</a>
+					</div>
+				</div>
+				<!-- !Slider -->
+				
+				<!-- Description -->
+				<div class="fn_cs_desc">
+					<p>Hodl Up Society represent a collection of 10,000 NFTs categorized by level of rarity and generated with hundreds of elements. Hodl Up Society NFTs are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS.</p>
+				</div>
+				<!-- !Description -->
+				
+				
+			</div>
+		<!-- Section Divider -->
+		<div class="fn_cs_section_divider">
+			<div class="divider">
+				<span class="short"></span>
+				<span class="long"></span>
+				<span class="short"></span>
+			</div>
+		</div>
+		<!-- !Section Divider -->	
+	
+		<!-- Section FAQ -->
+		<section id="faq">		
+
+			<div class="container">
+				
+				<div class="fn_cs_faq">
+					
+					<div class="faq_col">
+						<h3 class="fn__maintitle" data-text="FAQ">FAQ</h3>
+						<div class="fn_cs_divider">
+							<div class="divider">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<div class="desc">
+							<p>Pellentesque eu ex iaculis, tempus ex eu, consectetur lectus. Aenean nec iaculis est, a mattis turpis. Morbi posuere lorem id risus luctus, luctus tristique enim luctus. Vivamus ut tincidunt erat.</p>
+							<p>Nunc nec sollicitudin elit, ut pretium dui. Nulla facilisis pulvinar odio ac suscipit. Quisque pretium, est id facilisis luctus, magna lorem posuere velit.</p>
+						</div>
+					</div>
+					
+					<div class="faq_col">
+						
+						<div class="fn_cs_accordion">
+							<div class="acc_item active">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 1?">FAQ Question 1?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+							<div class="acc_item">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 2?">FAQ Question 2?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+							<div class="acc_item">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 3?">FAQ Question 3?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+							<div class="acc_item">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 4?">FAQ Question 4?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="faq_col">
+						
+						<div class="fn_cs_accordion">
+							<div class="acc_item active">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 5?">FAQ Question 5?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+							<div class="acc_item">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 6?">FAQ Question 6?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+							<div class="acc_item">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 7?">FAQ Question 7?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+							<div class="acc_item">
+								<div class="acc_header">
+									<h3 class="fn__maintitle" data-text="FAQ Question 8?">FAQ Question 8?</h3>
+									<span class="icon"><span></span></span>
+								</div>
+								<div class="acc_content">
+									<p>We need to add text here, This text is just to show how the design will look like.</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</section>
+		<!-- Section FAQ -->
+		
+		<!-- Section Divider -->
+		<div class="fn_cs_section_divider">
+			<div class="divider">
+				<span class="short"></span>
+				<span class="long"></span>
+				<span class="short"></span>
+			</div>
+		</div>
+		<!-- !Section Divider -->					
+		<!-- Section RoadMap -->
+		<section id="roadmap">
+			<div class="container">
+				
+				<h3 class="fn__maintitle big" data-text="RoadMap" data-align="center">RoadMap</h3>
+				
+				<div class="fn_cs_roadmap">
+					<div class="step_holder">
+						<div class="step_in"></div>
+					</div>
+					<div class="slider_holder">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 01</span>
+										<div class="item_in">
+											<p class="date">November 09, 2022</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+									  <span class="phase">Phase 02</span>
+										<div class="item_in">
+											<p class="date">November 17, 2022</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 03</span>
+										<div class="item_in">
+											<p class="date">November 28, 2022</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 04</span>
+										<div class="item_in">
+											<p class="date">November 11, 2022</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 05</span>
+										<div class="item_in">
+											<p class="date">November 23, 2022</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 06</span>
+										<div class="item_in">
+											<p class="date">December 02, 2022</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 07</span>
+										<div class="item_in">
+											<p class="date">January 14, 2023</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 08</span>
+										<div class="item_in">
+											<p class="date">January 28, 2023</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<span class="icon"></span>
+										<span class="phase">Phase 09</span>
+										<div class="item_in">
+											<p class="date">February 12, 2023</p>
+											<h3 class="title">NFT Sale</h3>
+											<p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!-- !Section RoadMap -->		
+		
+		<!-- Section Divider -->
+		<div class="fn_cs_section_divider">
+			<div class="divider">
+				<span class="short"></span>
+				<span class="long"></span>
+				<span class="short"></span>
+			</div>
+		</div>
+		<!-- !Section Divider -->
+	
+		<!-- Section Divider -->		
+		<section id="ourteam" class="ourteam">
+		<h3 class="fn__maintitle big" data-text="Our Team" data-align="center">Our Team</h3>
+		
+		<div class="team-container">
+			<div class="team-member-holder">
+				<div class="team-member"> 
+					<div class="member-imageHolder">
+						<img class="member-img" src="img/slider/1.jpg"></img>
+					</div>
+					<div class="member-name">Dailo</div>
+					<div class="member-role">Director</div>
+				</div>
+			</div>
+			<div class="team-member-holder">
+				<div class="team-member"> 
+					<div class="member-imageHolder">
+						<img class="member-img" src="img/slider/2.jpg"></img>
+					</div>
+					<div class="member-name">Can</div>
+					<div class="member-role">Developer</div>
+				</div>
+			</div>
+			<div class="team-member-holder">
+				<div class="team-member"> 
+					<div class="member-imageHolder">
+						<img class="member-img" src="img/slider/3.jpg"></img>
+					</div>
+					<div class="member-name">Todd</div>
+					<div class="member-role">Artist</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<!-- !Section Divider -->		
+				
+		<!-- Section Divider -->
+		<div class="fn_cs_section_divider">
+			<div class="divider">
+				<span class="short"></span>
+				<span class="long"></span>
+				<span class="short"></span>
+			</div>
+		</div>
+		<!-- !Section Divider -->
+		
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="footer">
+					<div class="left_part">
+						<p>Copyright 2022 — Designed &amp; Developed by <a href="" target="_blank">Hold Up Society</a></p>
+					</div>
+					<div class="right_part">
+						<ul>
+							<li><a class="creative_link" href="">Privacy Policy</a></li>
+							<li><a class="creative_link" href="">Cookies</a></li>
+							<li><a class="creative_link" href="">Terms &amp; Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- !Footer -->
+		
+	</div>
+	<!-- !Content -->	
+
+	<!-- Totop -->
+	<a href="#" class="metaportal_fn_totop">
+		<span class="totop_inner">
+			<span class="icon">
+				<img src="svg/down.svg" alt="" class="fn__svg">
+			</span>
+			<span class="text">Scroll To Top</span>
+		</span>
+	</a>
+	<!-- /Totop -->
+	
+	<!-- Search Button -->
+	<a href="#" class="metaportal_fn_search">
+		<span class="icon">
+			<img src="svg/loupe.svg" alt="" class="fn__svg">
+		</span>
+	</a>
+	<!-- !Search Button -->
+	
+	
+</div>
+<!-- !Main -->
+
+<!-- Scripts -->
+<script src="js/metamask-onboarding.bundle.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/splide.min.js"></script>
+<script src="js/constants.js"></script>
+<script src="js/abi.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/jquery.js?ver=6.0"></script>
+<script type="text/javascript" src="js/plugins.js?ver=6.0"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js?ver=6.0"></script> <![endif]-->
+<script type="text/javascript" src="js/init.js?ver=6.0"></script>
+<!-- !Scripts -->
+
+</body>
 </html>
