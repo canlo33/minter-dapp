@@ -6669,7 +6669,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     font-family: 'edo_szregular';
     padding: 1rem 2rem;
 	display: inline-block;
-    color: var(--accent-color);
+    color: white;
     font-weight: bold;
     font-size: .75vw;
     text-align: center;
