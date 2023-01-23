@@ -1175,7 +1175,7 @@ a.full_link{
 	padding: 20px;
 	border-radius: 20px;
 	/* border: 1px solid rgba(255,255,255,.5); */
-	background-color: rgba(255,255,255,.05);
+	background-color: rgba(255,255,255, 0);
 	transition: all 1s ease;
 	position: absolute;
 	top: 0;
@@ -1220,7 +1220,7 @@ a.full_link{
 	top: 0;
 	left: 0;
     color: var(--mc1);
-    opacity: .15;
+    opacity: 0;
     border-radius: 20px;
     box-shadow: 0px 5px 20px;
 }
@@ -6095,8 +6095,6 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	left: 0;
 	right: 0;
 	bottom: 0;
-	border-radius: 0 20px 20px 0; 
-	border: 3px solid transparent;
 	background: -moz-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
 	background: -webkit-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
 	background: linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
@@ -6119,7 +6117,6 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     color: var(--mc1);
     content: '';
     opacity: .15;
-	border-radius: 0 20px 20px 0;
     box-shadow: 0px 5px 20px;
 }
 .fn_cs_shortabout .about_right .abs_img{
