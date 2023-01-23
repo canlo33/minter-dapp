@@ -6665,14 +6665,15 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     margin-left: 2rem;
     margin-right: 2rem;
     border-color: transparent;
+	background-color: #bb86fc;
+    font-family: 'edo_szregular';
     padding: 1rem 2rem;
 	display: inline-block;
     color: var(--accent-color);
-    font-style: italic;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: .75vw;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     transition: all 0.3s ease;
     box-shadow: var(--header-shadow);
     cursor: pointer;
