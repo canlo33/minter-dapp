@@ -33,15 +33,6 @@
 
 <body>
 	
-	<!-- Nav -->
-	<!-- <div class="nav">
-		<div class="wallet"><a>
-			</a><a href="#" class="metaportal_fn_button wallet_opener">
-			<span id="connectWallet">Connect MetaMask</span>
-			</a>
-		</div>
-	</div> -->
-
 	<div class="nav">
 		<div class="wrapper">
 			<a class="cta" href="#">
@@ -220,6 +211,9 @@
 
 	</div>
 
+	<div id="changeButton" style=" z-index: 50;    min-width: 20%;    max-width: 30%;    height: 70%;    position: fixed;    bottom: 0;    transform: translate(210%, 0);">
+		
+	</div>
 	<div class="gentlemen" style="visibility: visible; width: 45%; transform: translate(65%, 0px);">
 		<img src="img/gentlemen/monk.png">
 	</div>
@@ -252,6 +246,10 @@
 		<img src="./images/x-icon/playButton.png">
 	</div>
 	
+	<audio id="myAudio">
+		<source src="music.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
 	
 	<!-- !Content -->
 
@@ -270,6 +268,8 @@
 	<!-- !Scripts -->
 
 	<script>
+
+		var changeButton = document.getElementById('changeButton');
 		const backgrounds = document.querySelectorAll('[class^="appBackground"]');
 		let currentBackground = 0;
 
@@ -287,7 +287,7 @@
 		gentlemens[currentGentlemen].style.visibility = 'visible';
 		clickMes[currentClickMe].style.visibility = 'visible';
 
-		function onClick() {
+		changeButton.onclick = function() {
 		holdUpTittles[currentholdUpTittle].style.visibility = 'hidden';
 		currentholdUpTittle = (currentholdUpTittle + 1) % holdUpTittles.length;
 		holdUpTittles[currentholdUpTittle].style.visibility = 'visible';
@@ -304,10 +304,34 @@
 		currentClickMe = (currentClickMe + 1) % clickMes.length;
 		clickMes[currentClickMe].style.visibility = 'visible';
 
-		}
+		};
 
-		document.addEventListener('click', onClick);
 	</script>
+
+	<script>
+		// get the audio element and play/pause button
+		const audio = document.getElementById("myAudio");
+		const playButton = document.querySelector(".playButtonHolder img");
+
+		// set the default state of the button to 'play'
+		let isPlaying = false;
+		playButton.src = "./images/x-icon/playButton.png";
+
+		// add a click event listener to the play/pause button
+		playButton.addEventListener("click", function() {
+		if (isPlaying) {
+			// pause the audio and change the button to 'play'
+			audio.pause();
+			playButton.src = "./images/x-icon/playButton.png";
+		} else {
+			// play the audio and change the button to 'pause'
+			audio.play();
+			playButton.src = "./images/x-icon/pauseButton.png";
+		}
+		// toggle the value of isPlaying
+		isPlaying = !isPlaying;
+		});
+	  </script>
 
 </body>
 
