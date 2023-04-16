@@ -6315,19 +6315,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin-bottom: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .fn_cs_join{
 	border-radius: 20px;
-	background-color: rgba(255,255,255,.03);
+	background-color: rgba(255,255,255,.12);
 	padding: 117px 40px 100px;
 }
 .fn_cs_join .join_in{
