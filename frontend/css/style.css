@@ -6829,7 +6829,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     border-color: transparent;
 	background-color: #bb86fc;
     font-family: 'edo_szregular';
-    padding: 1rem 2rem;
+    padding: 1rem 3.5rem;
 	display: inline-block;
     color: white;
     font-weight: bold;
@@ -6856,7 +6856,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .logos{
 	display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
