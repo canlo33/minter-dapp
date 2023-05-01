@@ -147,13 +147,15 @@ async function loadInfo() {
       const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
       if(!whitelisted) {
         mainText.innerText = p_presale_mint_not_whitelisted;
+        mintButton.disabled = true;
+        mintButton.hidden = true;
       } else {
         mainText.innerText = p_presale_mint_whitelisted;
         mintButton.innerText = button_presale_mint_whitelisted;
         mintContainer.classList.remove('hidden');
       }
     } catch(e) {
-      // console.log(e);
+      console.log(e);
       mainText.innerText = p_presale_mint_already_minted;
       mintButton.disabled = true;
       mintButton.hidden = true;
@@ -305,7 +307,7 @@ async function mint() {
       mintButton.innerText = button_public_mint;
       mintButton.disabled = false;
 
-      console.log(e);
+      //console.log(e);
     }
   } else if (presaleMintActive) {
     // PRE-SALE MINTING
