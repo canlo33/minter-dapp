@@ -134,7 +134,7 @@ async function loadInfo() {
     actionButton.classList.add('hidden');
     mintButton.innerText = button_public_mint;
     mintContainer.classList.remove('hidden');
-    setTotalPrice();
+    setTotalPrice(publicMintActive);
   } else if (presaleMintActive) {
     startTime = window.info.runtimeConfig.publicMintStart;
     mainHeading.innerText = h1_presale_mint;
@@ -162,7 +162,7 @@ async function loadInfo() {
       //actionButton.innerText = button_presale_already_minted;
       actionButton.innerText = "sth is wrong";
     }
-    setTotalPrice();
+    setTotalPrice(publicMintActive);
   } else {
     startTime = window.info.runtimeConfig.presaleMintStart;
     mainHeading.innerText = h1_presale_coming_soon;
@@ -211,22 +211,22 @@ async function loadInfo() {
     let value = parseInt(mintInput.value) - 1 || 1;
     if(!min || value >= min) {
       mintInput.value = value;
-      setTotalPrice()
+      setTotalPrice(publicMintActive)
     }
   };
   mintIncrement.onclick = () => {
     let value = parseInt(mintInput.value) + 1 || 1;
     if(!max || value <= max) {
       mintInput.value = value;
-      setTotalPrice()
+      setTotalPrice(publicMintActive)
     }
   };
   setQtyMax.onclick = () => {
     mintInput.value = max;
-    setTotalPrice()
+    setTotalPrice(publicMintActive)
   };
   mintInput.onchange = () => {
-    setTotalPrice()
+    setTotalPrice(publicMintActive)
   };
   mintInput.onkeyup = async (e) => {
     if (e.keyCode === 13) {
@@ -236,7 +236,7 @@ async function loadInfo() {
   mintButton.onclick = mint;
 }
 
-function setTotalPrice() {
+function setTotalPrice(publicMintActive) {
   const mintInput = document.getElementById("mintInput");
   const mintInputValue = parseInt(mintInput.value);
   const totalPrice = document.getElementById("totalPrice");
@@ -247,7 +247,10 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  const totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
+  const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
+  if (publicMintActive){
+   totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
+  }  
   
   let priceType = '';
   if(chain === 'goerli' || chain === 'ethereum') {
@@ -255,10 +258,7 @@ function setTotalPrice() {
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
   }
-  const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
-  if (publicMintActive){
-    price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
-  }  
+  const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
   totalPrice.innerText = `${price} ${priceType}`;
   mintButton.disabled = false;
   mintInput.disabled = false;
