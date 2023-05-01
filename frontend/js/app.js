@@ -265,15 +265,19 @@ function setTotalPrice(publicMintActive) {
 }
 
 async function mint() {
+  const publicMintActive = await contract.methods.mintingActive().call();
+  const presaleMintActive = await contract.methods.presaleActive().call();
   const mintButton = document.getElementById("mintButton");
   mintButton.disabled = true;
   const spinner = '<div class="dot-elastic"></div><span>Waiting for transaction...</span>';
   mintButton.innerHTML = spinner;
 
   const amount = parseInt(document.getElementById("mintInput").value);
-  const value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
-  const publicMintActive = await contract.methods.mintingActive().call();
-  const presaleMintActive = await contract.methods.presaleActive().call();
+  const value = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
+  if (publicMintActive){
+  value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
+  }
+
 
   if (publicMintActive) {
     // PUBLIC MINT
