@@ -187,7 +187,10 @@ async function loadInfo() {
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
   }
-  const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
+  const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
+  if (publicMintActive){
+    price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
+  }  
   const pricePerMint = document.getElementById("pricePerMint");
   const maxPerMint = document.getElementById("maxPerMint");
   const totalSupply = document.getElementById("totalSupply");
