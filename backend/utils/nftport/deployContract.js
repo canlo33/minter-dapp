@@ -22,6 +22,7 @@ let {
   PUBLIC_MINT_START_DATE,
   BASE_URI,
   PREREVEAL_TOKEN_URI,
+  PRESALE_MINT_PRICE,
   PRESALE_MINT_START_DATE,
   PRESALE_WHITELISTED_ADDRESSES
 } = require(`${basePath}/src/config.js`);
@@ -86,6 +87,7 @@ const deployContract = async () => {
       royalties_address: ROYALTY_ADDRESS,
       max_supply: MAX_SUPPLY,
       mint_price: MINT_PRICE,
+      presale_mint_price: PRESALE_MINT_PRICE,
       tokens_per_mint: TOKENS_PER_MINT,
       treasury_address: TREASURY_ADDRESS,
       public_mint_start_date: PUBLIC_MINT_START_DATE,
