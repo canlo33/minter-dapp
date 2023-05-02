@@ -189,12 +189,12 @@ async function loadInfo() {
     price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
   }  
   const pricePerMint = document.getElementById("pricePerMint");
-  const maxPerMint = document.getElementById("maxPerMint");
+  // const maxPerMint = document.getElementById("maxPerMint");
   const totalSupply = document.getElementById("totalSupply");
   const mintInput = document.getElementById("mintInput");
   
   pricePerMint.innerText = `${price} ${priceType}`;
-  maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
+  // maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
   totalSupply.innerText = `${info.deploymentConfig.maxSupply}`;
   mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
 
