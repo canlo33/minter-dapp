@@ -1,36 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CodeCats</title>
+    <title>Hold Up Society</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="manifest" href="images/x-icon/site.webmanifest" />
     <link rel="stylesheet" href="css/three-dots.min.css" />
-    <link rel="stylesheet" href="css/splide.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-          <button class="wallet-btn btn" id="connectWallet">
-            <span>Connect Wallet</span>
+
+    <div class="sections">
+
+      <div class="logos">
+        <a href="index.html#story" class="default">
+          <img src="img/nav/story.png">
+        </a>
+  
+        <a href="index.html#art" class="default">
+          <img src="img/nav/art.png">
+        </a>
+  
+        <a href="index.html#faq" class="default">
+          <img src="img/nav/faq.png">
+        </a>
+  
+        <a href="index.html#roadmap" class="default">
+          <img src="img/nav/roadmap.png">
+        </a>
+  
+        <a href="index.html#socials" class="default">
+          <img src="img/nav/socials.png">
+        </a>
+  
+        <div style="flex:0.35"></div>
+  
+        <button class="wallet-btn btn" id="connectWallet">
+          <span>Connect Wallet</span>
           </button>
+      </div>
+    </div>
+
+    <div style="height:250px;"></div>
+
+    <div class="container small">
+      <div class="metaportal_fn_mintbox">
+        <div class="mint_left">
+          <div class="mint_title"><span>Public Mint is Live</span></div>
+          <div class="mint_list">
+            <ul>
+              <li>
+                <div class="item">
+                  <h4>Price</h4>
+                  <h3>2.25 ETH</h3>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <h4>Total Supply</h4>
+                  <h3>10000</h3>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <h4>Quantity</h4>
+                  <div class="qnt">
+                    <span class="decrease">-</span>
+                    <span class="summ" data-price="2.25">2</span>
+                    <span class="increase">+</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <h4>Total Price</h4>
+                  <h3><span class="total_price">4.5</span> ETH + GAS</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mint_desc">
+            <a href="#" target="_blank" class="metaportal_fn_button">
+              <span>Mint</span>
+            </a>
+            <p>By clicking “MINT button, you agree to our <a href="#">Terms of Service</a> and our <a href="#">Privacy Policy</a>.</p>
+          </div>
+        </div>
+        <div class="mint_right">
+          <div class="mright">
+            <div class="mint_time">
+              <h4>Public Mint Ends In</h4>
+              <!-- 
+                There is two types of countdown: due_date (Due Date), ever (Evergreen timer)
+                  1. 	data-type="due_date"
+                    In this case you have to change value of data-date. For example:
+                    data-date="October 13, 2022 12:30:00"
+                    It will mean that mint will finished at this time
+
+                  2. 	data-type="ever"
+                    In this case you have to change values of data-days, data-hours, data-minutes and data-seconds. For example:
+                    data-days="34"
+                    data-hours="10"
+                    data-minutes="20"
+                    data-seconds="0"
+                    It will mean that the time expires after this time, but when the page is refreshed, the value will return again. It means, it won't end.
+              -->
+              <h3 class="metaportal_fn_countdown" data-type="ever" data-date="October 13, 2022 12:30:00" data-days="34" data-hours="10" data-minutes="20" data-seconds="0">34d: 10h: 6m: 51s</h3>
+            </div>
+            <div class="mint_checked">
+              <p>
+                <span class="text">Whitelist:</span>
+                <span class="status">Soldout <span class="icon"><img src="svg/checked.svg" alt="" class="fn__svg"></span></span>
+              </p>
+              <p>
+                <span class="text">Presale:</span>
+                <span class="status">Soldout <span class="icon"><img src="svg/checked.svg" alt="" class="fn__svg"></span></span>
+              </p>
+            </div>
+            <div class="mint_info">
+              <p>You need to pay a GAS fee during minting. We allow max 5 mints per wallet.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
+    
 
-    <section class="container not-connected">
-      <div>
-        <h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
-        <h1 id="welcomeH1">Welcome to the HOLD UP SOCIETY NFT Project!!</h1>
-        <p id="welcomeP">
-          MINT PAGE TRIAL.
-        </p>
-      </div>
-    </section>
-
+<!--     
     <section class="container">
       <div class="countdown card">
         <div id="countdown">
@@ -115,7 +212,7 @@
           <button class="hero-btn btn">View Collection</button>
         </a>
       </div>
-    </section>
+    </section> -->
 
     <script src="js/metamask-onboarding.bundle.js"></script>
     <script src="js/web3.min.js"></script>
@@ -124,5 +221,10 @@
     <script src="js/abi.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/jquery.js?ver=6.0"></script>
+    <script type="text/javascript" src="js/plugins.js?ver=6.0"></script>
+    <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js?ver=6.0"></script> <![endif]-->
+    <script type="text/javascript" src="js/init.js?ver=6.0"></script>
+    <!-- !Scripts -->
   </body>
 </html>
