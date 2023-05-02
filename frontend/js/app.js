@@ -170,13 +170,13 @@ async function loadInfo() {
 
   // const clockdiv = document.getElementById("countdown");
   // clockdiv.setAttribute("data-date", startTime);
-  countdown();
+  // countdown();
 
-  // SHOW CARD
-  setTimeout(() => {
-    const countdownCard = document.querySelector('.countdown');
-    countdownCard.classList.add('show-card');
-  }, 1000);
+  // // SHOW CARD
+  // setTimeout(() => {
+  //   const countdownCard = document.querySelector('.countdown');
+  //   countdownCard.classList.add('show-card');
+  // }, 1000);
 
   let priceType = '';
   if(chain === 'goerli' || chain === 'ethereum') {
