@@ -168,8 +168,8 @@ async function loadInfo() {
     mainText.innerText = p_presale_coming_soon;
   }
 
-  const clockdiv = document.getElementById("countdown");
-  clockdiv.setAttribute("data-date", startTime);
+  // const clockdiv = document.getElementById("countdown");
+  // clockdiv.setAttribute("data-date", startTime);
   countdown();
 
   // SHOW CARD
