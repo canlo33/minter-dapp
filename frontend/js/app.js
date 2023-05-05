@@ -160,9 +160,19 @@ async function loadInfo() {
       mainText.innerText = p_presale_mint_already_minted;
       mintButton.disabled = true;
       mintButton.hidden = true;
-      console.log("Total Supply: " + await contract.methods.totalSupply().call + "Max Supply: " + await contract.methods.maxSupply);
-      mainText.innerText = await contract.methods.totalSupply().call;
-      mainHeading.innerText = await contract.methods.maxSupply().call;
+
+      contract.methods.totalSupply().call((err, result) => {
+        if(err){
+          console.error('Error: ', err);
+          // handle the error here
+        }
+      
+        let supply = web3.utils.fromWei(result, 'ether');
+        mainText.innerText = supply.toString();
+        
+        // You can add supply now to whatever part
+        // of your page you want it displayed
+      });
     }
     setTotalPrice(publicMintActive);
   } else {
