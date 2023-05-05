@@ -168,7 +168,7 @@ async function loadInfo() {
         }
       
         let supply = web3.utils.fromWei(result, 'ether');
-        mainText.innerText = supply.toString();
+        mainText.innerText = supply;
         
         // You can add supply now to whatever part
         // of your page you want it displayed
