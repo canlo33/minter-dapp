@@ -161,7 +161,7 @@ async function loadInfo() {
       mintButton.disabled = true;
       mintButton.hidden = true;
 
-      mainText.innerText = `${info.deploymentConfig.maxSupply}`;
+      mainText.innerText = `${info.deploymentConfig.totalSupply}`;
     }
     setTotalPrice(publicMintActive);
   } else {
