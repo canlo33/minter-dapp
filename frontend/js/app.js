@@ -146,28 +146,30 @@ async function loadInfo() {
       const merkleJson = await merkleData.json();
       const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
       console.log("Total Supply: " + await contract.methods.totalSupply().call + "Max Supply: " + await contract.methods.maxSupply().call);
-      if(!whitelisted) {
-        mainText.innerText = p_presale_mint_not_whitelisted;
-        mintButton.disabled = true;
-        mintButton.hidden = true;
-      } else {
-        mainText.innerText = p_presale_mint_whitelisted;
-        mintButton.innerText = button_presale_mint_whitelisted;
-        mintContainer.classList.remove('hidden');
-      }
-    } catch(e) {
-      //console.log(e);
-      mainText.innerText = p_presale_mint_already_minted;
-      mintButton.disabled = true;
-      mintButton.hidden = true;
-    }
-    setTotalPrice(publicMintActive);
-  } else {
-    startTime = window.info.runtimeConfig.presaleMintStart;
-    mainHeading.innerText = h1_presale_coming_soon;
-    subHeading.innerText = h2_presale_coming_soon;
-    mainText.innerText = p_presale_coming_soon;
-  }
+      mainText.innerText = await contract.methods.totalSupply().call;
+      mainHeading.innerText = await contract.methods.maxSupply().call;
+    //   if(!whitelisted) {
+    //     mainText.innerText = p_presale_mint_not_whitelisted;
+    //     mintButton.disabled = true;
+    //     mintButton.hidden = true;
+    //   } else {
+    //     mainText.innerText = p_presale_mint_whitelisted;
+    //     mintButton.innerText = button_presale_mint_whitelisted;
+    //     mintContainer.classList.remove('hidden');
+    //   }
+    // } catch(e) {
+    //   //console.log(e);
+    //   mainText.innerText = p_presale_mint_already_minted;
+    //   mintButton.disabled = true;
+    //   mintButton.hidden = true;
+    // }
+  //   setTotalPrice(publicMintActive);
+  // } else {
+  //   startTime = window.info.runtimeConfig.presaleMintStart;
+  //   mainHeading.innerText = h1_presale_coming_soon;
+  //   subHeading.innerText = h2_presale_coming_soon;
+  //   mainText.innerText = p_presale_coming_soon;
+  // }
 
   // const clockdiv = document.getElementById("countdown");
   // clockdiv.setAttribute("data-date", startTime);
