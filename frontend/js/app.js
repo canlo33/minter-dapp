@@ -160,8 +160,6 @@ async function loadInfo() {
       mainText.innerText = p_presale_mint_already_minted;
       mintButton.disabled = true;
       mintButton.hidden = true;
-
-      mainText.innerText = await contract.methods.totalSupply().call();
     }
     setTotalPrice(publicMintActive);
   } else {
