@@ -160,7 +160,7 @@ async function loadInfo() {
       mainText.innerText = p_presale_mint_already_minted;
       mintButton.disabled = true;
       mintButton.hidden = true;
-      console.log("Total Supply: " + await contract.methods.totalSupply().call + "Max Supply: " + await contract.methods.maxSupply().call);
+      console.log("Total Supply: " + await contract.methods.totalSupply().call + "Max Supply: " + await contract.methods.maxSupply);
       mainText.innerText = await contract.methods.totalSupply().call;
       mainHeading.innerText = await contract.methods.maxSupply().call;
     }
