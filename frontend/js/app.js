@@ -161,18 +161,7 @@ async function loadInfo() {
       mintButton.disabled = true;
       mintButton.hidden = true;
 
-      contract.methods.availableSupply().call((err, result) => {
-        if(err){
-          console.error('Error: ', err);
-          // handle the error here
-        }
-      
-        let supply = web3.utils.fromWei(result, 'ether');
-        mainText.innerText = supply;
-        
-        // You can add supply now to whatever part
-        // of your page you want it displayed
-      });
+      mainText.innerText = `${info.deploymentConfig.maxSupply}`;
     }
     setTotalPrice(publicMintActive);
   } else {
