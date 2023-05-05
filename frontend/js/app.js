@@ -145,6 +145,7 @@ async function loadInfo() {
       );
       const merkleJson = await merkleData.json();
       const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
+      console.log("Total Supply: " + await contract.methods.totalSupply + "Max Supply: " + await contract.methods.maxSupply);
       if(!whitelisted) {
         mainText.innerText = p_presale_mint_not_whitelisted;
         mintButton.disabled = true;
