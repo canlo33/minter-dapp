@@ -161,7 +161,7 @@ async function loadInfo() {
       mintButton.disabled = true;
       mintButton.hidden = true;
 
-      contract.methods.totalSupply().call((err, result) => {
+      contract.methods.availableSupply().call((err, result) => {
         if(err){
           console.error('Error: ', err);
           // handle the error here
