@@ -125,7 +125,7 @@ async function loadInfo() {
   const mainText = document.getElementById("mainText");
   const mintContainer = document.getElementById("mintContainer");
   const mintButton = document.getElementById("mintButton");
-  const whitelistedAddresses = await contract.methods.whitelist().call();
+  const whitelistedAddresses = await contract.methods.whitelist(1, 100).call();
   console.log(whitelistedAddresses);
 
   let startTime = "";
