@@ -125,8 +125,7 @@ async function loadInfo() {
   const mainText = document.getElementById("mainText");
   const mintContainer = document.getElementById("mintContainer");
   const mintButton = document.getElementById("mintButton");
-  const whitelistedAddresses = await contract.methods.whitelist(1, 100).call();
-  console.log(whitelistedAddresses);
+
 
   let startTime = "";
   if (publicMintActive) {
@@ -147,6 +146,9 @@ async function loadInfo() {
       );
       const merkleJson = await merkleData.json();
       const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
+      console.log("Merkle DATA: " + merkleData);
+      console.log("Merkle Json: " + merkleJson);
+      console.log("IsWhitelisted: " + whitelisted);
  
       if(!whitelisted) {
         mainText.innerText = p_presale_mint_not_whitelisted;
