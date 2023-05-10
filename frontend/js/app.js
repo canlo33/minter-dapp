@@ -249,7 +249,7 @@ function setTotalPrice(publicMintActive) {
   }
   const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
   if (publicMintActive){
-   totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
+   totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   }  
   
   let priceType = '';
