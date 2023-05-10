@@ -171,16 +171,6 @@ async function loadInfo() {
     mainText.innerText = p_presale_coming_soon;
   }
 
-  // const clockdiv = document.getElementById("countdown");
-  // clockdiv.setAttribute("data-date", startTime);
-  // countdown();
-
-  // // SHOW CARD
-  // setTimeout(() => {
-  //   const countdownCard = document.querySelector('.countdown');
-  //   countdownCard.classList.add('show-card');
-  // }, 1000);
-
   let priceType = '';
   if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
@@ -247,6 +237,10 @@ function setTotalPrice(publicMintActive) {
     mintInput.disabled = true;
     return;
   }
+  console.log("info.runtimeConfig.publicMintPrice: " + info.runtimeConfig.publicMintPrice);
+  console.log("info.runtimeConfig.presaleMintPrice: " + info.runtimeConfig.presaleMintPrice);
+  console.log("window.contract.price: " + window.contract.price);
+  console.log("info.runtimeConfig.price: " + info.runtimeConfig.price);
   const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
   if (publicMintActive){
    totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
