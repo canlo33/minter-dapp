@@ -132,7 +132,6 @@ async function loadInfo() {
     mainHeading.innerText = h1_public_mint;
     mainText.innerText = p_public_mint;
     mintButton.innerText = button_public_mint;
-    mintContainer.classList.remove('hidden');
     setTotalPrice(publicMintActive);
   } else if (presaleMintActive) {
     startTime = window.info.runtimeConfig.publicMintStart;
@@ -157,7 +156,6 @@ async function loadInfo() {
       } else {
         mainText.innerText = p_presale_mint_whitelisted;
         mintButton.innerText = button_presale_mint_whitelisted;
-        mintContainer.classList.remove('hidden');
       }
     } catch(e) {
       //console.log(e);
