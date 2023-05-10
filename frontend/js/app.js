@@ -237,8 +237,9 @@ function setTotalPrice(publicMintActive) {
     mintInput.disabled = true;
     return;
   }
-  console.log("info.runtimeConfig.publicMintPrice: " + BigInt(info.runtimeConfig.publicMintPrice));
-  console.log("info.runtimeConfig.presaleMintPrice: " + BigInt(info.runtimeConfig.presaleMintPrice));
+  console.log("info.deploymentConfig.price: " + BigInt(info.deploymentConfig.price));
+  console.log("info.deploymentConfig.mintPrice: " + BigInt(info.deploymentConfig.mintPrice));
+  console.log("info.deploymentConfig.pricePerMint: " + BigInt(info.deploymentConfig.pricePerMint));
   console.log("window.contract.price: " + window.contract.price);
   console.log("info.runtimeConfig.price: " + info.runtimeConfig.price);
   const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
