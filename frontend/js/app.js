@@ -237,7 +237,7 @@ function setTotalPrice(publicMintActive) {
     mintInput.disabled = true;
     return;
   }
-  console.log("info.deploymentConfig.price: " + BigInt(info.deploymentConfig.price));
+  console.log("info.deploymentConfig.price: " + info.deploymentConfig.price);
   console.log("info.deploymentConfig.mintPrice: " + BigInt(info.deploymentConfig.mintPrice));
   console.log("info.deploymentConfig.pricePerMint: " + BigInt(info.deploymentConfig.pricePerMint));
   console.log("window.contract.price: " + window.contract.price);
