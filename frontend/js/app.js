@@ -237,7 +237,7 @@ function setTotalPrice(publicMintActive) {
     mintInput.disabled = true;
     return;
   }
-  console.log("web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether'); " + web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether'));
+  console.log("mintInputValue; " + mintInputValue);
   console.log("info.runtimeConfig.presaleMintPrice: " + BigInt(info.runtimeConfig.publicMintPrice));
   const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
   if (publicMintActive){
