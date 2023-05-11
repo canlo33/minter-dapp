@@ -177,17 +177,21 @@ async function loadInfo() {
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
   }
-  const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
-  if (publicMintActive){
-    price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
-  }  
+
   const pricePerMint = document.getElementById("pricePerMint");
-  // const maxPerMint = document.getElementById("maxPerMint");
   const totalSupply = document.getElementById("totalSupply");
   const mintInput = document.getElementById("mintInput");
-  
-  pricePerMint.innerText = `${price} ${priceType}`;
-  // maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
+
+  if (publicMintActive){
+    const publicsalePrice = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
+    pricePerMint.innerText = `${publicsalePrice} ${priceType}`;
+  }
+  else {
+    const presalePrice = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
+    pricePerMint.innerText = `${presalePrice} ${priceType}`;
+  }  
+
+
   totalSupply.innerText = await contract.methods.totalSupply().call() + "/" + `${info.deploymentConfig.maxSupply}`;
   mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
 
