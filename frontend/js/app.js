@@ -239,10 +239,13 @@ function setTotalPrice(publicMintActive) {
   }
   console.log("mintInputValue; " + mintInputValue);
   console.log("info.runtimeConfig.presaleMintPrice: " + BigInt(info.runtimeConfig.publicMintPrice));
-  const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
-  if (publicMintActive == true){
-   totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
+
+  if (publicMintActive){
+    const totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
   }  
+  else{
+    const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
+  }
   
   let priceType = '';
   if(chain === 'goerli' || chain === 'ethereum') {
