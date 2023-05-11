@@ -125,6 +125,7 @@ async function loadInfo() {
   const mainText = document.getElementById("mainText");
   const mintContainer = document.getElementById("mintContainer");
   const mintButton = document.getElementById("mintButton");
+  mintButton.style.visibility = "visible";
 
 
   let startTime = "";
@@ -145,14 +146,12 @@ async function loadInfo() {
       );
       const merkleJson = await merkleData.json();
       const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
-      // console.log("Merkle DATA: " + merkleData);
-      // console.log("Merkle Json: " + merkleJson);
-      // console.log("IsWhitelisted: " + whitelisted);
  
       if(!whitelisted) {
         mainText.innerText = p_presale_mint_not_whitelisted;
         mintButton.disabled = true;
         mintButton.hidden = true;
+        mintButton.style.visibility = "hidden";
       } else {
         mainText.innerText = p_presale_mint_whitelisted;
         mintButton.innerText = button_presale_mint_whitelisted;
@@ -332,8 +331,6 @@ async function mint() {
       mainText.innerText = mint_failed;
       mintButton.innerText = button_presale_mint_whitelisted;
       mintButton.disabled = false;
-
-      // console.log(e);
     }
   }
 }
