@@ -241,7 +241,7 @@ function setTotalPrice(publicMintActive) {
   console.log("info.runtimeConfig.presaleMintPrice: " + BigInt(info.runtimeConfig.publicMintPrice));
   const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
   if (publicMintActive){
-   totalPriceWei = BigInt(web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether')) * BigInt(mintInputValue);
+   totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
   }  
   
   let priceType = '';
