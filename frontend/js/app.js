@@ -283,13 +283,13 @@ async function mint() {
         .send({ from: window.address, value: publicSaleValue.toString() });
       if(mintTransaction) {
         if(chain == 'goerli') {
-          const url = `https://goerli.etherscan.io/tx/${mintTransaction.transactionHash}`;
+          const url = "https://goerli.etherscan.io/tx/" + mintTransaction.transactionHash;
           const mintedContainer = document.querySelector('.minted-container');
-          const countdownContainer = document.querySelector('.countdown');
-          const mintedTxnBtn = document.getElementById("mintedTxnBtn");
-          mintedTxnBtn.href = url;
-          countdownContainer.classList.add('hidden');
-          mintedContainer.classList.remove('hidden');
+          //const countdownContainer = document.querySelector('.countdown');
+          //const mintedTxnBtn = document.getElementById("mintedTxnBtn");
+          //mintedTxnBtn.href = url;
+          //countdownContainer.classList.add('hidden');
+          //mintedContainer.classList.remove('hidden');
         }
         console.log("Minted successfully!", `Transaction Hash: ${mintTransaction.transactionHash}`);
       } else {
