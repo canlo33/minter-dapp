@@ -237,21 +237,25 @@ function setTotalPrice(publicMintActive) {
     mintInput.disabled = true;
     return;
   }
-  console.log("mintInputValue; " + mintInputValue);
-  console.log("info.runtimeConfig.presaleMintPrice: " + BigInt(info.runtimeConfig.publicMintPrice));
-  let totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
-  if (publicMintActive){
-    totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
-  }  
-  
+ 
   let priceType = '';
   if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
   }
-  const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
-  totalPrice.innerText = `${price} ${priceType}`;
+  
+  if (publicMintActive){
+    const publicSaletotalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
+    const publicSaleprice = web3.utils.fromWei(publicSaletotalPriceWei.toString(), 'ether');
+    totalPrice.innerText = `${publicSaleprice} ${priceType}`;
+  }  
+  else{
+    const preSaletotalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
+    const preSaleprice = web3.utils.fromWei(preSaletotalPriceWei.toString(), 'ether');
+    totalPrice.innerText = `${preSaleprice} ${priceType}`;
+  }
+  
   mintButton.disabled = false;
   mintInput.disabled = false;
 }
