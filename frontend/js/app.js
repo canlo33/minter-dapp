@@ -269,18 +269,14 @@ async function mint() {
   mintButton.innerHTML = spinner;
 
   const amount = parseInt(document.getElementById("mintInput").value);
-  const value = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
-  if (publicMintActive){
-  value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
-  }
-
 
   if (publicMintActive) {
     // PUBLIC MINT
+    const publicSaleValue = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
     try {
       const mintTransaction = await contract.methods
         .mint(amount)
-        .send({ from: window.address, value: value.toString() });
+        .send({ from: window.address, value: publicSaleValue.toString() });
       if(mintTransaction) {
         if(chain === 'goerli') {
           const url = `https://goerli.etherscan.io/tx/${mintTransaction.transactionHash}`;
@@ -309,7 +305,8 @@ async function mint() {
       //console.log(e);
     }
   } else if (presaleMintActive) {
-    // PRE-SALE MINTING
+        // PRE-SALE MINTING
+        const preSaleValue = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
     try {
       const merkleData = await fetch(
         `/.netlify/functions/merkleProof/?wallet=${window.address}&chain=${chain}&contract=${contractAddress}`
@@ -317,7 +314,7 @@ async function mint() {
       const merkleJson = await merkleData.json();
       const presaleMintTransaction = await contract.methods
         .presaleMint(amount, merkleJson)
-        .send({ from: window.address, value: value.toString() });
+        .send({ from: window.address, value: preSaleValue.toString() });
       if(presaleMintTransaction) {
         if(chain === 'goerli') {
           const url = `https://goerli.etherscan.io/tx/${presaleMintTransaction.transactionHash}`;
