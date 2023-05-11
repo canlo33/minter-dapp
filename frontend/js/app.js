@@ -268,10 +268,10 @@ async function mint() {
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
   const mintButton = document.getElementById("mintButton");
+  const mainText = document.getElementById("mainText");
   mintButton.disabled = true;
   const spinner = '<div class="dot-elastic"></div><span>Waiting for transaction...</span>';
   mintButton.innerHTML = spinner;
-
   const amount = parseInt(document.getElementById("mintInput").value);
 
   if (publicMintActive) {
@@ -285,15 +285,15 @@ async function mint() {
         if(chain == 'goerli') {
           const url = "https://goerli.etherscan.io/tx/" + mintTransaction.transactionHash;
           const mintedContainer = document.querySelector('.minted-container');
+          mainText.innerText = "Minted successfully!";
+          mintButton.innerText = button_public_mint;
           //const countdownContainer = document.querySelector('.countdown');
           //const mintedTxnBtn = document.getElementById("mintedTxnBtn");
           //mintedTxnBtn.href = url;
           //countdownContainer.classList.add('hidden');
           //mintedContainer.classList.remove('hidden');
         }
-        console.log("Minted successfully!", `Transaction Hash: ${mintTransaction.transactionHash}`);
       } else {
-        const mainText = document.getElementById("mainText");
         mainText.innerText = mint_failed;
         mintButton.innerText = button_public_mint;
         mintButton.disabled = false;
