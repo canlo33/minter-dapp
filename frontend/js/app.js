@@ -312,7 +312,7 @@ async function mint() {
       const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
       if(!whitelisted)
       {
-        mintButton.innerText = button_presale_mint_whitelisted;
+        mintButton.innerText = button_public_mint;
         return;
       }
       const presaleMintTransaction = await contract.methods
