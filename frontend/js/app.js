@@ -303,8 +303,8 @@ async function mint() {
     } catch(e) {
       const mainText = document.getElementById("mainText");
       console.log(e);
-      mainText.innerText = mint_failed;
-      mintButton.innerText = button_public_mint;
+      //mainText.innerText = mint_failed;
+      //mintButton.innerText = button_public_mint;
       mintButton.disabled = false;
 
       //console.log(e);
