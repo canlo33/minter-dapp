@@ -284,14 +284,8 @@ async function mint() {
       if(mintTransaction) {
         if(chain == 'goerli') {
           const url = "https://goerli.etherscan.io/tx/" + mintTransaction.transactionHash;
-          const mintedContainer = document.querySelector('.minted-container');
           mainText.innerText = "Minted successfully!";
           mintButton.innerText = button_public_mint;
-          //const countdownContainer = document.querySelector('.countdown');
-          //const mintedTxnBtn = document.getElementById("mintedTxnBtn");
-          //mintedTxnBtn.href = url;
-          //countdownContainer.classList.add('hidden');
-          //mintedContainer.classList.remove('hidden');
         }
       } else {
         mainText.innerText = mint_failed;
@@ -303,8 +297,8 @@ async function mint() {
     } catch(e) {
       const mainText = document.getElementById("mainText");
       console.log(e);
-      //mainText.innerText = mint_failed;
-      //mintButton.innerText = button_public_mint;
+      mainText.innerText = mint_failed;
+      mintButton.innerText = button_public_mint;
       mintButton.disabled = false;
 
       //console.log(e);
@@ -322,22 +316,16 @@ async function mint() {
         .send({ from: window.address, value: preSaleValue.toString() });
       if(presaleMintTransaction) {
         if(chain === 'goerli') {
-          const url = `https://goerli.etherscan.io/tx/${presaleMintTransaction.transactionHash}`;
-          const mintedContainer = document.querySelector('.minted-container');
-          const countdownContainer = document.querySelector('.countdown');
-          const mintedTxnBtn = document.getElementById("mintedTxnBtn");
-          mintedTxnBtn.href = url;
-          countdownContainer.classList.add('hidden');
-          mintedContainer.classList.remove('hidden');
+          const url = "https://goerli.etherscan.io/tx/" + mintTransaction.transactionHash;
+          mainText.innerText = "Minted successfully!";
+          mintButton.innerText = button_public_mint;
         }
-        console.log("Minted successfully!", `Transaction Hash: ${presaleMintTransaction.transactionHash}`);
+
       } else {
         const mainText = document.getElementById("mainText");
         mainText.innerText = mint_failed;
         mintButton.innerText = button_presale_mint_whitelisted;
         mintButton.disabled = false;
-
-        console.log("Failed to mint!");
       }
     } catch(e) {
       const mainText = document.getElementById("mainText");
