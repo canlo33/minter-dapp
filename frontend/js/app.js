@@ -126,6 +126,7 @@ async function loadInfo() {
   const mintContainer = document.getElementById("mintContainer");
   const mintButton = document.getElementById("mintButton");
   mintButton.style.visibility = "visible";
+  mainText.style.fontWeight = "bold";
 
 
   let startTime = "";
