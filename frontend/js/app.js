@@ -311,6 +311,11 @@ async function mint() {
         `/.netlify/functions/merkleProof/?wallet=${window.address}&chain=${chain}&contract=${contractAddress}`
       );
       const merkleJson = await merkleData.json();
+      const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
+      if(!whitelisted)
+      {
+        return;
+      }
       const presaleMintTransaction = await contract.methods
         .presaleMint(amount, merkleJson)
         .send({ from: window.address, value: preSaleValue.toString() });
