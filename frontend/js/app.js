@@ -313,6 +313,7 @@ async function mint() {
       if(!whitelisted)
       {
         mintButton.innerText = button_public_mint;
+        mintButton.style.visibility = "hidden";
         return;
       }
       const presaleMintTransaction = await contract.methods
