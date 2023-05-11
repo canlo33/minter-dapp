@@ -300,8 +300,6 @@ async function mint() {
       mainText.innerText = mint_failed;
       mintButton.innerText = button_public_mint;
       mintButton.disabled = false;
-
-      //console.log(e);
     }
   } else if (presaleMintActive) {
         // PRE-SALE MINTING
@@ -314,6 +312,7 @@ async function mint() {
       const whitelisted = await contract.methods.isWhitelisted(window.address, merkleJson).call();
       if(!whitelisted)
       {
+        mintButton.innerText = button_presale_mint_whitelisted;
         return;
       }
       const presaleMintTransaction = await contract.methods
