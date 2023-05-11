@@ -282,7 +282,7 @@ async function mint() {
         .mint(amount)
         .send({ from: window.address, value: publicSaleValue.toString() });
       if(mintTransaction) {
-        if(chain === 'goerli') {
+        if(chain == 'goerli') {
           const url = `https://goerli.etherscan.io/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
