@@ -6897,3 +6897,22 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .social-logos img {
 	width: 5rem;
 }
+
+.input-number {
+	height: 100%;
+	padding: 1rem;
+	vertical-align: top;
+	text-align: center;
+	outline: none;
+  }
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+  user-select: none;
+}
+
+.mint-qty .btn {
+    padding: 1rem;
+    font-size: 13px;
+  }
