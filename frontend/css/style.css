@@ -6919,8 +6919,6 @@ a.metaportal_fn_videobutton:hover .fn__svg,
   
   .input-number {
 	height: 100%;
-	padding: 1rem;
-	vertical-align: top;
 	text-align: center;
 	outline: none;
   }
@@ -6938,13 +6936,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
   .btn {
 	display: inline-block;
-	padding: 1rem 2rem;
 	background: var(--btn-bg-color);
-	color: var(--accent-color);
-	font-family: var(--font-secondary);
-	font-style: italic;
-	font-weight: bold;
-	font-size: 1rem;
 	text-align: center;
 	text-transform: capitalize;
 	transition: all 0.3s ease;
@@ -6953,6 +6945,13 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	position: relative;
 	text-decoration: none;
 	outline: none;
+	font-size: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .btn:hover {
 	box-shadow: none;
