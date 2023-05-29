@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<meta name="description" content="Hold Up Society">
-	<meta name="author" content="Frenify">
+	<meta name="author" content="Hold Up Society">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -22,7 +22,7 @@
 	<!-- !Google Fonts -->
 
 	<!-- Styles -->
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
 	<link type="text/css" rel="stylesheet" href="css/plugins.css?ver=6.0" />
 	<link type="text/css" rel="stylesheet" href="css/landing.css" />
 	<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js?ver=6.0"></script> <![endif]-->
@@ -213,7 +213,7 @@
 
 	<div id="changeButton" style=" z-index: 50;    min-width: 20%;    max-width: 30%;    height: 70%;    position: fixed;    bottom: 0;    transform: translate(210%, 0);">
 		
-	</div>
+	<!-- </div>
 	<div class="gentlemen" style="visibility: visible; width: 45%; transform: translate(65%, 0px);">
 		<img src="img/gentlemen/monk.png">
 	</div>
@@ -240,7 +240,7 @@
 
 	<div class="gentlemen" style="visibility:hidden;">
 		<img src="img/gentlemen/10.png">
-	</div>
+	</div> -->
 
 	<div class="playButtonHolder">
 		<img src="./images/x-icon/playButton.png">
@@ -279,12 +279,12 @@
 		const clickMes = document.getElementsByClassName('ClickMe');
 		let currentClickMe = 0;
 
-		const gentlemens = document.getElementsByClassName('gentlemen');
-		let currentGentlemen = 0;
+		// const gentlemens = document.getElementsByClassName('gentlemen');
+		// let currentGentlemen = 0;
 
 		backgrounds[currentBackground].style.visibility = 'visible';
 		holdUpTittles[currentholdUpTittle].style.visibility = 'visible'
-		gentlemens[currentGentlemen].style.visibility = 'visible';
+		// gentlemens[currentGentlemen].style.visibility = 'visible';
 		clickMes[currentClickMe].style.visibility = 'visible';
 
 		changeButton.onclick = function() {
@@ -296,9 +296,9 @@
 		currentBackground = (currentBackground + 1) % backgrounds.length;
 		backgrounds[currentBackground].style.visibility = 'visible';
 	
-		gentlemens[currentGentlemen].style.visibility = 'hidden';
-		currentGentlemen = (currentGentlemen + 1) % gentlemens.length;
-		gentlemens[currentGentlemen].style.visibility = 'visible';
+		// gentlemens[currentGentlemen].style.visibility = 'hidden';
+		// currentGentlemen = (currentGentlemen + 1) % gentlemens.length;
+		// gentlemens[currentGentlemen].style.visibility = 'visible';
 
 		clickMes[currentClickMe].style.visibility = 'hidden';
 		currentClickMe = (currentClickMe + 1) % clickMes.length;

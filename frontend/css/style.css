@@ -3530,7 +3530,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .metaportal_fn_mintbox .mint_title{
 	position: absolute;
 	top: 30px;
-	left: -9px;
+	left: 0px;
 }
 .metaportal_fn_mintbox .mint_title span{
 	position: relative;
@@ -3706,7 +3706,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	color: var(--bc);
 }
 .metaportal_fn_mintbox .mint_checked .status{
-	display: -webkit-flex;
+	display: -webkit-flex; 
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
@@ -6936,7 +6936,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
   .btn {
 	display: inline-block;
-	background: var(--btn-bg-color);
+	/* background: var(--btn-bg-color); */
 	text-align: center;
 	text-transform: capitalize;
 	transition: all 0.3s ease;
@@ -6945,13 +6945,15 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	position: relative;
 	text-decoration: none;
 	outline: none;
-	font-size: 24px;
+	font-size: 22px;
     letter-spacing: 0;
     font-weight: 400;
     color: #ddd;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+	font-family: 'edo_szregular';
+    line-height: 1.22;
   }
   .btn:hover {
 	box-shadow: none;

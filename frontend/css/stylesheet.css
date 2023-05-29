@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'FC';
+    src: url('../fonts/FicticciaCollege.woff2') format('woff2'),
+        url('../fonts/FicticciaCollege.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HP';
+    src: url('../fonts/HennyPenny-Regular.woff2') format('woff2'),
+        url('../fonts/HennyPenny-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Griffy';
+    src: url('../fonts/Griffy-Regular.woff2') format('woff2'),
+        url('../fonts/Griffy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HP2';
+    src: url('../fonts/HennyPenny-Regular.woff2') format('woff2'),
+        url('../fonts/HennyPenny-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EA';
+    src: url('../fonts/Easilyamused.woff2') format('woff2'),
+        url('../fonts/Easilyamused.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'DID';
+    src: url('../fonts/DrippedInkDemoRegular.woff2') format('woff2'),
+        url('../fonts/DrippedInkDemoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CDO';
+    src: url('../fonts/ComikDemoOutline.woff2') format('woff2'),
+        url('../fonts/ComikDemoOutline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CD';
+    src: url('../fonts/ComikDemoRegular.woff2') format('woff2'),
+        url('../fonts/ComikDemoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CDT';
+    src: url('../fonts/ComikDemoTexture.woff2') format('woff2'),
+        url('../fonts/ComikDemoTexture.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB';
+    src: url('../fonts/sarahbetty.woff2') format('woff2'),
+        url('../fonts/sarahbetty.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB2';
+    src: url('../fonts/sarahbetty.woff2') format('woff2'),
+        url('../fonts/sarahbetty.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JTD';
+    src: url('../fonts/JungleTribeDemoRegular.woff2') format('woff2'),
+        url('../fonts/JungleTribeDemoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'edo_szregular';
+    src: url('../fonts/edosz-webfont.woff2') format('woff2'),
+         url('../fonts/edosz-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sg';
+    src: url('../fonts/SimpleGrungeRegular.woff2') format('woff2'),
+        url('../fonts/SimpleGrungeRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'tbs';
+    src: url('../fonts/TheBackyardScript.woff2') format('woff2'),
+        url('../fonts/TheBackyardScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bearded';
+    src: url('../fonts/Bearded.woff2') format('woff2'),
+        url('../fonts/Bearded.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saucer';
+    src: url('../fonts/SaucerBB.woff2') format('woff2'),
+        url('../fonts/SaucerBB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fontera';
+    src: url('../fonts/Fontera.woff2') format('woff2'),
+        url('../fonts/Fontera.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ftg';
+    src: url('../fonts/FrederickatheGreat-Regular.woff2') format('woff2'),
+        url('../fonts/FrederickatheGreat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'is';
+    src: url('../fonts/IntriqueScriptPersonalUse.woff2') format('woff2'),
+        url('../fonts/IntriqueScriptPersonalUse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
