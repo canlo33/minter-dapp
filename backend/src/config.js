@@ -7,13 +7,13 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "HUS Jun 16";
-const description = "Trial Minted On Jun 16";
+const namePrefix = "HUS Jul 4";
+const description = "Trial Minted On Jul 4";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 50,
+    growEditionSizeTo: 20000,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -29,8 +29,8 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 3500,
-  height: 3500,
+  width: 500,
+  height: 500,
   smoothing: false,
 };
 
@@ -46,7 +46,7 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'polygon'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'HUS Jun 16';
+const CONTRACT_NAME = 'HUS Jul 4';
 const CONTRACT_SYMBOL = 'HX';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x5913a309122AF62f2c558b0d1b5EDEedd9e55417';
@@ -73,7 +73,7 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "HUS Jun 16 Pre Reveal Description"; // Replace with what you want the generic descriptions to say.
+const GENERIC_DESCRIPTION = "HUS Jul 4 Pre Reveal Description"; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeiehni36o5z43pisfuvwha4givia7oygttklqzyqopyno3h5oqjdnu"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
