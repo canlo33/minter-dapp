@@ -13,7 +13,7 @@ const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 20000,
+    growEditionSizeTo: 1000,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -29,8 +29,8 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 500,
-  height: 500,
+  width: 1500,
+  height: 1500,
   smoothing: false,
 };
 
@@ -57,7 +57,7 @@ const PRESALE_MINT_PRICE = 0.0005; // Presale Minting price per NFT.
 const TOKENS_PER_MINT = 5; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2023-07-04T03:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2023-07-0T03:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = "2023-08-24T03:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
