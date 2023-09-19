@@ -268,45 +268,51 @@
 	<!-- !Scripts -->
 
 	<script>
+    var changeButton = document.getElementById('changeButton');
+    const backgrounds = document.querySelectorAll('[class^="appBackground"]');
+    let currentBackground = 0;
 
-		var changeButton = document.getElementById('changeButton');
-		const backgrounds = document.querySelectorAll('[class^="appBackground"]');
-		let currentBackground = 0;
+    const holdUpTittles = document.querySelectorAll('[class^="holdUpTittle"]');
+    let currentholdUpTittle = 0;
 
-		const holdUpTittles = document.querySelectorAll('[class^="holdUpTittle"]');
-		let currentholdUpTittle = 0;
+    const clickMes = document.getElementsByClassName('ClickMe');
+    let currentClickMe = 0;
 
-		const clickMes = document.getElementsByClassName('ClickMe');
-		let currentClickMe = 0;
+    const gentlemens = document.getElementsByClassName('gentlemen');
+    let currentGentlemen = 0;
 
-		const gentlemens = document.getElementsByClassName('gentlemen');
-		let currentGentlemen = 0;
+    backgrounds[currentBackground].style.visibility = 'visible';
+    holdUpTittles[currentholdUpTittle].style.visibility = 'visible';
+    gentlemens[currentGentlemen].style.visibility = 'visible';
+    clickMes[currentClickMe].style.visibility = 'visible';
 
-		backgrounds[currentBackground].style.visibility = 'visible';
-		holdUpTittles[currentholdUpTittle].style.visibility = 'visible'
-		gentlemens[currentGentlemen].style.visibility = 'visible';
-		clickMes[currentClickMe].style.visibility = 'visible';
+    let isFirstClick = true; // Flag to check if it's the first click
 
-		changeButton.onclick = function() {
-		holdUpTittles[currentholdUpTittle].style.visibility = 'hidden';
-		currentholdUpTittle = (currentholdUpTittle + 1) % holdUpTittles.length;
-		holdUpTittles[currentholdUpTittle].style.visibility = 'visible';
+    changeButton.onclick = function () {
+      holdUpTittles[currentholdUpTittle].style.visibility = 'hidden';
+      currentholdUpTittle = (currentholdUpTittle + 1) % holdUpTittles.length;
+      holdUpTittles[currentholdUpTittle].style.visibility = 'visible';
 
-		backgrounds[currentBackground].style.visibility = 'hidden';
-		currentBackground = (currentBackground + 1) % backgrounds.length;
-		backgrounds[currentBackground].style.visibility = 'visible';
-	
-		gentlemens[currentGentlemen].style.visibility = 'hidden';
-		currentGentlemen = (currentGentlemen + 1) % gentlemens.length;
-		gentlemens[currentGentlemen].style.visibility = 'visible';
+      backgrounds[currentBackground].style.visibility = 'hidden';
+      currentBackground = (currentBackground + 1) % backgrounds.length;
+      backgrounds[currentBackground].style.visibility = 'visible';
 
-		clickMes[currentClickMe].style.visibility = 'hidden';
-		currentClickMe = (currentClickMe + 1) % clickMes.length;
-		clickMes[currentClickMe].style.visibility = 'visible';
+      gentlemens[currentGentlemen].style.visibility = 'hidden';
+      currentGentlemen = (currentGentlemen + 1) % gentlemens.length;
+      gentlemens[currentGentlemen].style.visibility = 'visible';
 
-		};
+      clickMes[currentClickMe].style.visibility = 'hidden';
+      currentClickMe = (currentClickMe + 1) % clickMes.length;
+      clickMes[currentClickMe].style.visibility = 'visible';
 
-	</script>
+      // Check if it's the first click, and if so, play the audio
+      if (isFirstClick) {
+        audio.play();
+        playButton.src = "./images/x-icon/pauseButton.png";
+        isFirstClick = false; // Set the flag to false
+      }
+    };
+  </script>
 
 	<script>
 		// get the audio element and play/pause button
