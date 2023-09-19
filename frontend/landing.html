@@ -351,7 +351,6 @@
 
 		// Listen for the audio's "ended" event and reset the state
 		audio.addEventListener("ended", function () {
-			audio.currentTime = 0; // Reset audio to the beginning
 			playButton.src = "./images/x-icon/playButton.png";
 			isPlaying = false;
 		});
