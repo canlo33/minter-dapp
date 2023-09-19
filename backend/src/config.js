@@ -7,13 +7,13 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "HUS Jul 6";
-const description = "Trial Minted On Jul 6";
+const namePrefix = "HUS Sep 16";
+const description = "Trial Minted On Sep 16";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5000,
+    growEditionSizeTo: 10000,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -29,8 +29,8 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 1500,
-  height: 1500,
+  width: 3500,
+  height: 3500,
   smoothing: false,
 };
 
@@ -46,12 +46,12 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'HUS Jul 6';
+const CONTRACT_NAME = 'HUS Sep 16';
 const CONTRACT_SYMBOL = 'HX';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x5913a309122AF62f2c558b0d1b5EDEedd9e55417';
 const TREASURY_ADDRESS = '0x5913a309122AF62f2c558b0d1b5EDEedd9e55417';
-const MAX_SUPPLY = 50; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MAX_SUPPLY = 10000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
 const MINT_PRICE = 0.001; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const PRESALE_MINT_PRICE = 0.0005; // Presale Minting price per NFT.
 const TOKENS_PER_MINT = 5; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
@@ -73,7 +73,7 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "HUS Jul 6 Pre Reveal Description"; // Replace with what you want the generic descriptions to say.
+const GENERIC_DESCRIPTION = "HUS Sep 16 Pre Reveal Description"; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeiehni36o5z43pisfuvwha4givia7oygttklqzyqopyno3h5oqjdnu"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script

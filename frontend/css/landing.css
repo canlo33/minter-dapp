@@ -6614,11 +6614,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .appBackground {
-	background: url(../img/bg/bg1.gif) no-repeat center center fixed; 
-	background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	background: url(../img/bg/bg1.gif) no-repeat bottom center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
     height: 100%;
     width: 100%;
     position: fixed;
@@ -6628,11 +6629,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .appBackground1 {
-	background: url(../img/bg/bg2.gif) no-repeat center center fixed; 
-	background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	background: url(../img/bg/bg2.gif) no-repeat bottom center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
     height: 100%;
     width: 100%;
     position: fixed;
@@ -6643,10 +6645,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .appBackground4 {
 	background: url(../img/bg/bg3.gif) no-repeat center center fixed; 
-	background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
     height: 100%;
     width: 100%;
     position: fixed;
@@ -6656,10 +6659,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 .appBackground3 {
 	background: url(../img/bg/bg4.gif) no-repeat center center fixed; 
-	background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
     height: 100%;
     width: 100%;
     position: fixed;
@@ -6669,10 +6673,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 .appBackground2 {
 	background: url(../img/bg/bg5.gif) no-repeat center center fixed; 
-	background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
     height: 100%;
     width: 100%;
     position: fixed;
@@ -6681,11 +6686,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     z-index: -5;
 }
 .appBackground6 {
-	background: url(../img/bg/bg6.gif) no-repeat center center fixed; 
-	background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	background: url(../img/bg/bg6.gif) no-repeat top center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
     height: 100%;
     width: 100%;
     position: fixed;
@@ -6694,11 +6700,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     z-index: -5;
 }
 .appBackground5 {
-	background: url(../img/bg/bg7.gif) no-repeat center center fixed; 
-	background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+	background: url(../img/bg/bg7.gif) no-repeat bottom center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
     height: 100%;
     width: 100%;
     position: fixed;

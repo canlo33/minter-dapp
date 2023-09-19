@@ -1,28 +1,11 @@
-# Minting DAPP
+# NFT Minting DAPP
 
 ## Table of Contents
 
-- [RESOURCES](#resources)
 - [INSTALLATION](#installation)
   - [BACKEND](#backend)
   - [BACKEND COMMANDS](#backend-commands)
   - [FRONTEND](#frontend)
-
-## RESOURCES
-
-### Main Video
-
-🌟 [EASY Minting dApp | Whitelisting | Entire Process!! Create an Entire NFT Collection (10,000+)](https://youtu.be/cLB7u0KQFIs)
-
-### Update Video adding Ethereum support!
-
-🚀 [How To Deploy a Smart Contract to Ethereum!! (Updated Minting dApp)](https://youtu.be/-EB2TTQxSWc)
-
-Base art generator code is from [hashlips_art_engine](https://github.com/HashLips/hashlips_art_engine)
-
-Contract uses [NFTPort](https://nftport.xyz)
-
-Join the Discord server for more help from the community: [codeSTACKr Discord](https://discord.gg/A9CnsVzzkZ)
 
 ## INSTALLATION
 
@@ -144,7 +127,6 @@ $ npm run refresh_os --start=1 --end=100
 
 - Update the `frontend/js/abi.js` file with the ABI from `backend/build/contract/_contract_abi.json`.
 - Update your information in the `frontend/js/constants.js` file.
-- Deploy your dApp to Netlify. (Reference the video for full instructions.)
+- Deploy your dApp to Netlify.
 
 
-## Reference the [main video](https://youtu.be/cLB7u0KQFIs) and [update video](https://youtu.be/-EB2TTQxSWc) for more details.
