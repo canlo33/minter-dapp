@@ -7,13 +7,13 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "HUS Sep 16";
-const description = "Trial Minted On Sep 16";
+const namePrefix = "HUS Sep 20";
+const description = "Trial Minted On Sep 20";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10000,
+    growEditionSizeTo: 100,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -46,7 +46,7 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'HUS Sep 16';
+const CONTRACT_NAME = 'HUS Sep 20';
 const CONTRACT_SYMBOL = 'HX';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x5913a309122AF62f2c558b0d1b5EDEedd9e55417';
@@ -57,10 +57,10 @@ const PRESALE_MINT_PRICE = 0.0005; // Presale Minting price per NFT.
 const TOKENS_PER_MINT = 5; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2023-07-14T03:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2023-09-29T03:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = "2023-08-24T03:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2023-09-21T02:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x5913a309122AF62f2c558b0d1b5EDEedd9e55417"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
@@ -73,7 +73,7 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "HUS Sep 16 Pre Reveal Description"; // Replace with what you want the generic descriptions to say.
+const GENERIC_DESCRIPTION = "HUS Sep 20 Pre Reveal Description"; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeiehni36o5z43pisfuvwha4givia7oygttklqzyqopyno3h5oqjdnu"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
