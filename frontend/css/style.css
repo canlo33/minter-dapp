@@ -6926,6 +6926,30 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     border: 2px solid rgba(255,255,255,0.15);
   }
 
+  .qty-btn {
+	display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    box-shadow: var(--header-shadow);
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    font-size: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'edo_szregular';
+    line-height: 1.22;
+	background: none;
+	border-radius: 2px;
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+
   input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
