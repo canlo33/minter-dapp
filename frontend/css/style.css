@@ -6912,10 +6912,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     position: relative;
     text-decoration: none;
     outline: none;
-    font-size: 22px;
+    font-size: 24px;
     letter-spacing: 0;
     font-weight: 400;
-    color: black;
+    color: #ddd;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
