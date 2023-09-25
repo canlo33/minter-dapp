@@ -208,7 +208,6 @@ async function loadInfo() {
     let value = parseInt(mintInput.value) - 1 || 1;
     if(!min || value >= min) {
       mintInput.value = value;
-      mintInput.disabled = true;
       setTotalPrice(publicMintActive)
     }
   };
@@ -216,13 +215,11 @@ async function loadInfo() {
     let value = parseInt(mintInput.value) + 1 || 1;
     if(!max || value <= max) {
       mintInput.value = value;
-      mintInput.disabled = true;
       setTotalPrice(publicMintActive)
     }
   };
   setQtyMax.onclick = () => {
     mintInput.value = max;
-    mintInput.disabled = true;
     setTotalPrice(publicMintActive)
   };
   mintInput.onchange = () => {
