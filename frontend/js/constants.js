@@ -1,4 +1,4 @@
-const contractAddress = "0x8188d62b21752D4479C2Cfb4C2dedad6C008CE63"; // Replace with your own contract address
+const contractAddress = "0x476b6546c6dB40Df66b777d9a648dc65a8dd9cf7"; // Replace with your own contract address
 const chain = 'goerli'; // goerli, polygon, or ethereum
 
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
