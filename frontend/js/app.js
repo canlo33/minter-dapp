@@ -129,7 +129,7 @@ async function loadInfo() {
   mainText.style.fontWeight = "bold";
 
   // Add a 0.1-second delay
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   let startTime = "";
   if (publicMintActive) {
