@@ -3,7 +3,6 @@ let hasReloaded = false;
 
 // METAMASK CONNECTION
 window.addEventListener("DOMContentLoaded", async () => {
-
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     checkChain();
@@ -23,6 +22,14 @@ window.addEventListener("DOMContentLoaded", async () => {
     window.ethereum.on("accountsChanged", (newAccounts) => {
       accounts = newAccounts;
       updateConnectStatus();
+    });
+
+    // Add an event listener for the "disconnect" event
+    window.ethereum.on("disconnect", () => {
+      if (!hasReloaded) {
+        hasReloaded = true;
+        location.reload();
+      }
     });
   }
 });
@@ -59,12 +66,6 @@ const updateConnectStatus = async () => {
           window.contract = new web3.eth.Contract(abi, contractAddress);
           loadInfo();
         });
-        
-        // Check if the page has not been reloaded yet and reload it
-        if (!hasReloaded) {
-          hasReloaded = true;
-          location.reload();
-        }
     };
   }
 };
