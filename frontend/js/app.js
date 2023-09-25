@@ -128,6 +128,8 @@ async function loadInfo() {
   mintButton.style.visibility = "visible";
   mainText.style.fontWeight = "bold";
 
+  // Add a 0.1-second delay
+  await new Promise((resolve) => setTimeout(resolve, 100));
 
   let startTime = "";
   if (publicMintActive) {
@@ -158,7 +160,6 @@ async function loadInfo() {
         mintButton.innerText = button_presale_mint_whitelisted;
       }
     } catch(e) {
-      //console.log(e);
       mainText.innerText = p_presale_mint_already_minted;
       mintButton.disabled = true;
       mintButton.hidden = true;
