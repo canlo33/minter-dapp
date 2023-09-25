@@ -6949,7 +6949,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	border-radius: 2px;
     border: 2px solid rgba(255,255,255,0.15);
 	border-radius: 50%;
-    padding: 0.25em 0.8em;
+    padding: 0 0.125em;
   }
 
   input::-webkit-outer-spin-button,

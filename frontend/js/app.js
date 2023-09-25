@@ -231,6 +231,7 @@ async function loadInfo() {
     }
   };
   mintButton.onclick = mint;
+  mintInput.disabled = true;
 }
 
 function setTotalPrice(publicMintActive) {
