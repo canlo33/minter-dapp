@@ -43,7 +43,7 @@ const updateConnectStatus = async () => {
     onboarding.stopOnboarding();
     window.contract = new web3.eth.Contract(abi, contractAddress);
     loadInfo();
-    location.reload();
+    window.location.reload();
   } else {
     onboardButton.innerText = "Connect MetaMask";
     onboardButton.onclick = async () => {
@@ -58,7 +58,6 @@ const updateConnectStatus = async () => {
           accounts = accts;
           window.contract = new web3.eth.Contract(abi, contractAddress);
           loadInfo();
-          location.reload();
         });
     };
   }
