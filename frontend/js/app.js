@@ -22,7 +22,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     window.ethereum.on("accountsChanged", (newAccounts) => {
       accounts = newAccounts;
       updateConnectStatus();
-      location.reload();
     });
   }
 });
@@ -44,6 +43,7 @@ const updateConnectStatus = async () => {
     onboarding.stopOnboarding();
     window.contract = new web3.eth.Contract(abi, contractAddress);
     loadInfo();
+    location.reload();
   } else {
     onboardButton.innerText = "Connect MetaMask";
     onboardButton.onclick = async () => {
@@ -58,6 +58,7 @@ const updateConnectStatus = async () => {
           accounts = accts;
           window.contract = new web3.eth.Contract(abi, contractAddress);
           loadInfo();
+          location.reload();
         });
     };
   }
