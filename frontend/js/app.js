@@ -2,6 +2,7 @@ let accounts;
 let hasReloaded = false;
 
 window.addEventListener("DOMContentLoaded", async () => {
+
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     checkChain();
@@ -21,14 +22,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     window.ethereum.on("accountsChanged", (newAccounts) => {
       accounts = newAccounts;
       updateConnectStatus();
-    });
-
-    // Add an event listener for the "disconnect" event
-    window.ethereum.on("disconnect", (error) => {
-      if (error.code === 4001 && !hasReloaded) {
-        hasReloaded = true;
-        location.reload();
-      }
     });
   }
 });
@@ -280,7 +273,7 @@ async function mint() {
   const mintButton = document.getElementById("mintButton");
   const mainText = document.getElementById("mainText");
   mintButton.disabled = true;
-  const spinner = '<div class="dot-elastic"></div><span>Waiting for transaction...</span>';
+  const spinner = 'Waiting for transaction..';
   mintButton.innerHTML = spinner;
   const amount = parseInt(document.getElementById("mintInput").value);
 
