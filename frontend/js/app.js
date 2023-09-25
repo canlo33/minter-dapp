@@ -2,7 +2,6 @@ let accounts;
 let hasReloaded = false;
 
 window.addEventListener("DOMContentLoaded", async () => {
-
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     checkChain();
@@ -22,6 +21,14 @@ window.addEventListener("DOMContentLoaded", async () => {
     window.ethereum.on("accountsChanged", (newAccounts) => {
       accounts = newAccounts;
       updateConnectStatus();
+    });
+
+    // Add an event listener for the "disconnect" event
+    window.ethereum.on("disconnect", (error) => {
+      if (error.code === 4001 && !hasReloaded) {
+        hasReloaded = true;
+        location.reload();
+      }
     });
   }
 });
