@@ -1,5 +1,6 @@
-let accounts;
 
+let accounts;
+let hasReloaded = false;
 // METAMASK CONNECTION
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -43,7 +44,6 @@ const updateConnectStatus = async () => {
     onboarding.stopOnboarding();
     window.contract = new web3.eth.Contract(abi, contractAddress);
     loadInfo();
- 
   } else {
     onboardButton.innerText = "Connect MetaMask";
     onboardButton.onclick = async () => {
@@ -60,6 +60,12 @@ const updateConnectStatus = async () => {
           loadInfo();
         });
     };
+    
+    // Check if the website has not been reloaded yet and reload it
+    if (!hasReloaded) {
+      hasReloaded = true;
+      location.reload();
+    }
   }
 };
 
