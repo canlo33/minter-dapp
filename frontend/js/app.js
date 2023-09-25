@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     window.ethereum.on("accountsChanged", (newAccounts) => {
       accounts = newAccounts;
       updateConnectStatus();
+      location.reload();
     });
   }
 });
@@ -128,8 +129,6 @@ async function loadInfo() {
   mintButton.style.visibility = "visible";
   mainText.style.fontWeight = "bold";
 
-  // Add a 0.1-second delay
-  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   let startTime = "";
   if (publicMintActive) {
