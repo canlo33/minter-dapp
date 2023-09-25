@@ -1,6 +1,6 @@
-
 let accounts;
 let hasReloaded = false;
+
 // METAMASK CONNECTION
 window.addEventListener("DOMContentLoaded", async () => {
 
@@ -67,6 +67,7 @@ const updateConnectStatus = async () => {
         }
     };
   }
+};
 
 async function checkChain() {
   let chainId = 0;
@@ -342,5 +343,4 @@ async function mint() {
       mintButton.disabled = false;
     }
   }
-}
 }
