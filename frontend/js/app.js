@@ -264,7 +264,7 @@ function setTotalPrice(publicMintActive) {
   }
   
   mintButton.disabled = false;
-  mintInput.disabled = false;
+  mintInput.disabled = true;
 }
 
 async function mint() {
