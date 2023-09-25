@@ -59,15 +59,14 @@ const updateConnectStatus = async () => {
           window.contract = new web3.eth.Contract(abi, contractAddress);
           loadInfo();
         });
+        
+        // Check if the page has not been reloaded yet and reload it
+        if (!hasReloaded) {
+          hasReloaded = true;
+          location.reload();
+        }
     };
-    
-    // Check if the website has not been reloaded yet and reload it
-    if (!hasReloaded) {
-      hasReloaded = true;
-      location.reload();
-    }
   }
-};
 
 async function checkChain() {
   let chainId = 0;
