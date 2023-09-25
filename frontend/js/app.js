@@ -53,7 +53,7 @@ const updateConnectStatus = async () => {
         })
         .then(function (accts) {
           onboardButton.innerText = `✔ ...${accts[0].slice(-4)}`;
-          onboardButton.disabled = true;
+          onboardButton.disabled = false;
           window.address = accts[0];
           accounts = accts;
           window.contract = new web3.eth.Contract(abi, contractAddress);
@@ -139,7 +139,6 @@ async function loadInfo() {
   } else if (presaleMintActive) {
     startTime = window.info.runtimeConfig.publicMintStart;
     mainHeading.innerText = h1_presale_mint;
-    //subHeading.innerText = h2_presale_mint;
     
     try {
       // CHECK IF WHITELISTED
@@ -167,7 +166,6 @@ async function loadInfo() {
   } else {
     startTime = window.info.runtimeConfig.presaleMintStart;
     mainHeading.innerText = h1_presale_coming_soon;
-    subHeading.innerText = h2_presale_coming_soon;
     mainText.innerText = p_presale_coming_soon;
   }
 
