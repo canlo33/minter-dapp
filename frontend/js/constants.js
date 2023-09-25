@@ -16,4 +16,4 @@ const button_presale_mint_whitelisted = "Presale Mint";
 const button_presale_mint_not_whitelisted = "Get on the Whitelist";
 const button_presale_already_minted = "Join The Community";
 const button_public_mint = "Mint";
-const mint_failed = "Minting failed. 😢 Please try again later.";
+const mint_failed = "Minting failed. 😢 Please try again later..";
