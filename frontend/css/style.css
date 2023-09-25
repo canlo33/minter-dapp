@@ -6924,6 +6924,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background: none;
 	border-radius: 2px;
     border: 2px solid rgba(255,255,255,0.15);
+	padding: 0 10px;
   }
 
   .qty-btn {
