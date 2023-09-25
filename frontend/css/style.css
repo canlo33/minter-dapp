@@ -6922,7 +6922,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     font-family: 'edo_szregular';
     line-height: 1.22;
 	background: none;
-    border: none;
+	border-radius: 2px;
+    border: 2px solid rgba(255,255,255,0.15);
   }
   
   .input-number {
