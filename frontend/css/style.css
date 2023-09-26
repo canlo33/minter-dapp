@@ -3530,7 +3530,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .metaportal_fn_mintbox .mint_title{
 	position: absolute;
 	top: 30px;
-	left: 0px;
+	left: 50px;
 }
 .metaportal_fn_mintbox .mint_title span{
 	position: relative;
