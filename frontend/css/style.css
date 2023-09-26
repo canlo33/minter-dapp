@@ -6853,12 +6853,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .logos .default{
-	opacity: .75;
+	/* opacity: .75; */
     transform: scale(.85);
 }
 
 .logos .default:hover{
-	opacity: .85;
+	/* opacity: .85; */
     transform: scale(1);
 }
 
