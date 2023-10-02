@@ -1,42 +1,4 @@
-/*=========================================================================
 
-   Template Name: Scott - NFT Minting and Collection Landing Page HTML5 Template
-   Author: Harnish Design
-   Template URL: https://harnishdesign.net/demo/html/scott/demos.html
-   Author URL: https://themeforest.net/user/harnishdesign
-   File Description : Main css file of the template
-	
-===========================================================================
-  Table of Contents
-===========================================================================
-
-	1. Basic
-	2. Header
-		2.1 Navigation
-		2.2 Secondary Nav
-		2.3 Page Header
-	3. Layouts
-	4. Elements
-		4.1 Featured Box
-		4.2 Team
-		4.3 Accordion & Toggle
-		4.4 Nav
-		4.5 Tabs
-		4.6 Hero Background
-		4.7 Owl Carousel
-		4.8 Brands Grid
-		4.9 List Style
-	5. Footer
-		5.1 Footer
-		5.2 Social Icons
-		5.3 Back to Top
-	6. Helpers Classes
-	7. Extra
-
-===========================================================================*/
-/* =================================== */
-/*  1. Basic Style 
-/* =================================== */
 body, html {
   height: 100%;
 }
@@ -1240,7 +1202,7 @@ html[dir="rtl"] .about-img .img-2 {
 /*=== Roadmap ===*/
 .roadmap .step-pr {
   position: relative;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -1262,13 +1224,13 @@ html[dir="rtl"] .about-img .img-2 {
     position: absolute;
     top: 0px;
     width: 4px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     z-index: 0;
   }
   .roadmap .step-pr:after {
     position: absolute;
     content: ' ';
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     height: 4px;
     width: 3.15rem;
     right: -3.15rem;
@@ -1279,8 +1241,8 @@ html[dir="rtl"] .about-img .img-2 {
     width: 6px;
     height: 6px;
     background: #e5e5e6;
-    -webkit-box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     right: -3.95rem;
     z-index: 1;
