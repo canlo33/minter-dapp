@@ -133,7 +133,8 @@ async function loadInfo() {
   const mintButton = document.getElementById("mintButton");
   if (mintButton !== null)
     mintButton.style.visibility = "visible";
-  mainText.style.fontWeight = "bold";
+  if (mainText !== null)
+    mainText.style.fontWeight = "bold";
 
 
   let startTime = "";
