@@ -2028,7 +2028,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 /*=== Roadmap ===*/
 .roadmap .step-pr {
 	position: relative;
-	background: rgba(0, 0, 0, 0.3);
+	background: rgb(255 255 255 / 10%);
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
