@@ -6866,18 +6866,16 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .logos .default {
     transform: scale(0.85);
-    height: 140px;
+    height: auto;
     width: 140px;
 }
 
 .logos .default:hover {
-    transform: scale(1);
+    transform: scale(.95);
 }
 
 .logos .selected {
-	height: 140px;
-    width: 140px;
-    transform: scale(1);
+    transform: scale(.95);
 }
 
 .gridBG{
