@@ -131,7 +131,8 @@ async function loadInfo() {
   const mainText = document.getElementById("mainText");
   const mintContainer = document.getElementById("mintContainer");
   const mintButton = document.getElementById("mintButton");
-  mintButton.style.visibility = "visible";
+  if (mintButton !== null)
+    mintButton.style.visibility = "visible";
   mainText.style.fontWeight = "bold";
 
 
