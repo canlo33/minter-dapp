@@ -6836,35 +6836,49 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     outline: none;
 }
 
-.sections{
-	background: black;
-	width: 100%;
-	height: 150px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 9999;
-}
-
-.logos{
-	display: flex;
-    justify-content: flex-end;
+.sections {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    background: #1D1E18;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
-.logos .default{
-	/* opacity: .75; */
-    transform: scale(.85);
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
-.logos .default:hover{
-	/* opacity: .85; */
+.logo-group {
+    display: flex;
+	justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1; /* Allow logo-group to grow and take available space */
+}
+
+.logos .default {
+    transform: scale(0.85);
+    height: 150px;
+    width: 150px;
+}
+
+.logos .default:hover {
     transform: scale(1);
 }
 
 .logos .selected {
-	opacity: 1;
-    transform: scale(1.05);
+	height: 150px;
+    width: 150px;
+    transform: scale(1);
 }
 
 .gridBG{

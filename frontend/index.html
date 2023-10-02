@@ -35,34 +35,35 @@
 	</div>
 	<!-- Nav -->
 	<div class="sections">
-
 		<div class="logos">
-			<a href="#story" class="default">
-				<img src="img/nav/story.png">
-			</a>
+			<div class="logo-group">
+				<a href="#story" class="default">
+					<img src="img/nav/story.png">
+				</a>
+		
+				<a href="#art" class="default">
+					<img src="img/nav/art.png">
+				</a>
+		
+				<a href="#faq" class="default">
+					<img src="img/nav/faq.png">
+				</a>
+		
+				<a href="#roadmap" class="default">
+					<img src="img/nav/roadmap.png">
+				</a>
+		
+				<a href="#socials" class="default">
+					<img src="img/nav/socials.png">
+				</a>
+				<div style="flex: 0.35 1 0%;"></div>
+				<button class="wallet-btn btn" id="connectWallet">
+					<span>Connect Wallet</span>
+				</button>
+			</div>
+		</div>		
 
-			<a href="#art" class="default">
-				<img src="img/nav/art.png">
-			</a>
 
-			<a href="#faq" class="default">
-				<img src="img/nav/faq.png">
-			</a>
-
-			<a href="#roadmap" class="default">
-				<img src="img/nav/roadmap.png">
-			</a>
-
-			<a href="#socials" class="default">
-				<img src="img/nav/socials.png">
-			</a>
-
-			<div style="flex:0.20"></div>
-
-			<button class="wallet-btn btn" id="connectWallet">
-				<span>Connect Wallet</span>
-			  </button>
-		</div>
 	</div>
 
 	<div style="margin-top: 150px;padding: 20px;"></div>
@@ -658,26 +659,61 @@
 	<script type="text/javascript" src="js/init.js?ver=6.0"></script>
 	<!-- !Scripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.logos a').click(function (event) {
-				event.preventDefault();
-				$('.logos a').not(this).removeClass('selected').addClass('default');
-				$(this).removeClass('default').addClass('selected');
-			});
-		});
-	</script>
-
 
 	<script>
-		const links = document.querySelectorAll('a.default');
-		links.forEach(link => {
-			link.addEventListener('click', event => {
-				event.preventDefault();
-				const target = document.querySelector(link.getAttribute('href'));
-				target.scrollIntoView({ behavior: 'smooth' });
-			});
-		});
+
+// Get all anchor elements with class 'default'
+const logoLinks = document.querySelectorAll('.default');
+
+// Loop through each anchor element
+logoLinks.forEach((link) => {
+    // Get the img element inside the anchor
+    const img = link.querySelector('img');
+    
+    // Get the current source and hover source
+    const currentSrc = img.src;
+    const hoverSrc = currentSrc.replace('.png', '-hover.png');
+    
+    // Add mouseenter event listener
+    link.addEventListener('mouseenter', () => {
+        // Change the img src to hover source
+        img.src = hoverSrc;
+    });
+    
+    // Add mouseleave event listener
+    link.addEventListener('mouseleave', () => {
+        // Check if the link has the 'selected' class
+        if (!link.classList.contains('selected')) {
+            // If not, change the img src back to the original source
+            img.src = currentSrc;
+        }
+    });
+
+    // Add click event listener
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+        
+        // Remove 'selected' class from all logo links
+        logoLinks.forEach((logoLink) => {
+            logoLink.classList.remove('selected');
+        });
+        
+        // Add 'selected' class to the clicked link
+        link.classList.add('selected');
+        
+        // Remove the '-hover' suffix from the image source and keep it in hover state
+        img.src = hoverSrc;
+
+        // Remove the '-hover' suffix from other logo links
+        logoLinks.forEach((logoLink) => {
+            if (logoLink !== link) {
+                const otherImg = logoLink.querySelector('img');
+                otherImg.src = otherImg.src.replace('-hover.png', '.png');
+            }
+        });
+    });
+});
+
 	</script>
 
 </body>
