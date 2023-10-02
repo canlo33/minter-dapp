@@ -6840,7 +6840,6 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
     width: 100%;
     background: #1D1E18;
     position: fixed;
@@ -6867,8 +6866,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .logos .default {
     transform: scale(0.85);
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
 }
 
 .logos .default:hover {
@@ -6876,8 +6875,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .logos .selected {
-	height: 150px;
-    width: 150px;
+	height: 140px;
+    width: 140px;
     transform: scale(1);
 }
 
