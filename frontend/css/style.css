@@ -6222,12 +6222,6 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     font-weight: 500;
 }
 
-
-
-
-
-
-
 #about2{
 	padding: 150px 0;
 }
@@ -6245,9 +6239,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .fn_cs_shortabout .about_left{
 	width: 49.8%;
 	max-width: calc(50% - 2px);
-	background-color: rgba(255,255,255,.05);
 	border-radius: 20px 0 0 20px;
-	padding: 118px 70px 120px;
+	padding: 118px 50px 120px;
 }
 .fn_cs_shortabout .about_right{
 	width: 49.8%;
@@ -6294,6 +6287,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 .fn_cs_shortabout .fn__maintitle{
 	margin-bottom: 15px;
+	font-size: 31px;
+	color: white;
 }
 .fn_cs_shortabout .fn_cs_divider{
 	margin-bottom: 25px;
