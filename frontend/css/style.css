@@ -1856,11 +1856,6 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 
-
-
-
-
-
 #collection{
 	overflow: hidden;
 }
@@ -1869,7 +1864,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .fn_cs_collection{
-	margin-bottom: 102px;
+	margin-bottom: 30px;
 }
 .fn_cs_collection .item{
 	padding-left: 40px;
@@ -6234,18 +6229,20 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 .fn_cs_shortabout .about_left{
-	width: 49.8%;
-	max-width: calc(50% - 2px);
-	border-radius: 20px 0 0 20px;
-	padding: 118px 50px 120px;
+	width: 45%;
+    max-width: calc(45% - 2px);
+	max-height: calc(40% - 2px);
+    border-radius: 20px 0 0 20px;
+    margin: auto;
 }
 .fn_cs_shortabout .about_right{
-	width: 49.8%;
-	max-width: calc(50% - 2px);
-	position: relative;
+    width: 40%;
+    max-width: calc(40% - 2px);
+    max-height: calc(40% - 2px);
+    margin: auto;
 }
 .fn_cs_shortabout .about_right:after{
 	content: "";
