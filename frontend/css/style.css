@@ -7066,7 +7066,7 @@ input::-webkit-inner-spin-button {
 
 .HowToSteps .img{
 	width: 250px;
-	z-index: 99999;
+	z-index: 9;
 }
 
 .HowToSteps .img:hover{
