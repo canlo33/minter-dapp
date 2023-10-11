@@ -6374,8 +6374,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .fn_cs_join{
 	border-radius: 20px;
-	background-color: rgba(255,255,255,.12);
-	padding: 117px 40px 100px;
+	padding: 75px 40px 75px;
 }
 .fn_cs_join .join_in{
 	max-width: 700px;
@@ -7015,4 +7014,67 @@ input::-webkit-inner-spin-button {
     margin-right: auto;
     margin-left: auto;
 }
+
+.middleShadow{
+	position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin: auto;
+}
+
+.HowToMint {
+    width: 100% !important;
+	border-radius: 20px;
+    background-color: rgba(255,255,255,.12);
+    padding: 50px 40px 50px;
+}
+
+.HowToStepsContainer{
+	display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6.5rem 0px 0px;
+}
+
+.HowToSteps{
+	display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: all 0.2s ease 0s;
+    width: 350px;
+}
+
+.HowToSteps .number{
+	height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 2.5rem 0px 0.75rem;
+}
+
+.HowToSteps .img{
+	width: 250px;
+}
+
+.HowToSteps .img:hover{
+	transform: scale(1.1);
+    transition: all 0.2s ease 0s;
+}
+
+
 
