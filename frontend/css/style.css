@@ -7025,16 +7025,15 @@ input::-webkit-inner-spin-button {
 }
 
 .HowToMint {
-    width: 100% !important;
-	border-radius: 20px;
-    background-color: rgba(255,255,255,.12);
+	width: 70% !important;
     padding: 50px 40px 50px;
+	margin: auto;
 }
 
 .HowToStepsContainer{
 	display: flex;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+	justify-content: space-around;
     width: 100%;
     padding: 6.5rem 0px 0px;
 }
@@ -7045,7 +7044,7 @@ input::-webkit-inner-spin-button {
     -webkit-box-align: center;
     align-items: center;
     transition: all 0.2s ease 0s;
-    width: 350px;
+    width: 15%;
 }
 
 .HowToSteps .number{
@@ -7065,7 +7064,7 @@ input::-webkit-inner-spin-button {
 }
 
 .HowToSteps .img{
-	width: 250px;
+	width: 100%;
 	z-index: 9;
 }
 
