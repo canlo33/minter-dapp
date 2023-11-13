@@ -6837,12 +6837,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     top: 0;
     left: 0;
     z-index: 9999;
-    transition: background 0.3s ease; 
 }
-
-.sections-scrolled {
-	background: #1d1e18ee !important;
-  }
 
 .logos {
     display: flex;
