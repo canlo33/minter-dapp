@@ -6832,7 +6832,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: #1D1E18;
+    background: #1d1e188c;
     position: fixed;
     top: 0;
     left: 0;
@@ -6849,7 +6849,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .logo-group {
     display: flex;
-	justify-content: flex-end;
+	justify-content: center;
     align-items: center;
     width: 100%;
     flex-grow: 1; /* Allow logo-group to grow and take available space */
