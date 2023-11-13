@@ -40,8 +40,10 @@
 	<div class="gridBG">
 		<img src="img/bg/grid.png">
 	</div>
+	<img src="img/bg/RichyRich.png" style="width: 100vw; max-height: 92vh;">
+
 	<!-- Nav -->
-	<div class="sections">
+	<div class="sections" id="navbar">
 		<div class="logos">
 			<div class="logo-group">
 				<a href="#story" class="default">
@@ -63,15 +65,14 @@
 				<a href="#socials" class="default">
 					<img src="img/nav/socials.png">
 				</a>
-				<div style="flex: 0.35 1 0%;"></div>
-				<button class="wallet-btn btn" id="connectWallet">
-					<span>Connect Wallet</span>
-				</button>
+
 			</div>
 		</div>	
 	</div>
 
-	<div style="margin-top: 150px;padding: 20px;"></div>
+<button class="wallet-btn" id="connectWallet" style="position: fixed; top: 40px; right: 0; z-index: 9999999;">Install MetaMask</button>
+
+	<div style="padding: 15px;"></div>
 	<!-- !Nav -->
 	<!-- Content -->
 	<div class="metaportal_fn_content">
@@ -616,57 +617,57 @@
 
 	<script>
 
-// Get all anchor elements with class 'default'
-const logoLinks = document.querySelectorAll('.default');
+		// Get all anchor elements with class 'default'
+		const logoLinks = document.querySelectorAll('.default');
 
-// Loop through each anchor element
-logoLinks.forEach((link) => {
-    // Get the img element inside the anchor
-    const img = link.querySelector('img');
-    
-    // Get the current source and hover source
-    const currentSrc = img.src;
-    const hoverSrc = currentSrc.replace('.png', '-hover.png');
-    
-    // Add mouseenter event listener
-    link.addEventListener('mouseenter', () => {
-        // Change the img src to hover source
-        img.src = hoverSrc;
-    });
-    
-    // Add mouseleave event listener
-    link.addEventListener('mouseleave', () => {
-        // Check if the link has the 'selected' class
-        if (!link.classList.contains('selected')) {
-            // If not, change the img src back to the original source
-            img.src = currentSrc;
-        }
-    });
+		// Loop through each anchor element
+		logoLinks.forEach((link) => {
+			// Get the img element inside the anchor
+			const img = link.querySelector('img');
 
-    // Add click event listener
-    link.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the default link behavior
-        
-        // Remove 'selected' class from all logo links
-        logoLinks.forEach((logoLink) => {
-            logoLink.classList.remove('selected');
-        });
-        
-        // Add 'selected' class to the clicked link
-        link.classList.add('selected');
-        
-        // Remove the '-hover' suffix from the image source and keep it in hover state
-        img.src = hoverSrc;
+			// Get the current source and hover source
+			const currentSrc = img.src;
+			const hoverSrc = currentSrc.replace('.png', '-hover.png');
 
-        // Remove the '-hover' suffix from other logo links
-        logoLinks.forEach((logoLink) => {
-            if (logoLink !== link) {
-                const otherImg = logoLink.querySelector('img');
-                otherImg.src = otherImg.src.replace('-hover.png', '.png');
-            }
-        });
-    });
-});
+			// Add mouseenter event listener
+			link.addEventListener('mouseenter', () => {
+				// Change the img src to hover source
+				img.src = hoverSrc;
+			});
+
+			// Add mouseleave event listener
+			link.addEventListener('mouseleave', () => {
+				// Check if the link has the 'selected' class
+				if (!link.classList.contains('selected')) {
+					// If not, change the img src back to the original source
+					img.src = currentSrc;
+				}
+			});
+
+			// Add click event listener
+			link.addEventListener('click', (event) => {
+				event.preventDefault(); // Prevent the default link behavior
+
+				// Remove 'selected' class from all logo links
+				logoLinks.forEach((logoLink) => {
+					logoLink.classList.remove('selected');
+				});
+
+				// Add 'selected' class to the clicked link
+				link.classList.add('selected');
+
+				// Remove the '-hover' suffix from the image source and keep it in hover state
+				img.src = hoverSrc;
+
+				// Remove the '-hover' suffix from other logo links
+				logoLinks.forEach((logoLink) => {
+					if (logoLink !== link) {
+						const otherImg = logoLink.querySelector('img');
+						otherImg.src = otherImg.src.replace('-hover.png', '.png');
+					}
+				});
+			});
+		});
 
 	</script>
 
