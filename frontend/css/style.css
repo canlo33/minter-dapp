@@ -6832,11 +6832,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: #1d1e188c;
+    background: #1d1e1800;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
+    transition: background 0.3s ease; 
 }
 
 .logos {

@@ -43,7 +43,7 @@
 	<img src="img/bg/RichyRich.png" style="width: 100vw; max-height: 92vh;">
 
 	<!-- Nav -->
-	<div class="sections">
+	<div class="sections" id="navbar">
 		<div class="logos">
 			<div class="logo-group">
 				<a href="#story" class="default">
@@ -617,59 +617,81 @@
 
 	<script>
 
-// Get all anchor elements with class 'default'
-const logoLinks = document.querySelectorAll('.default');
+		// Get all anchor elements with class 'default'
+		const logoLinks = document.querySelectorAll('.default');
 
-// Loop through each anchor element
-logoLinks.forEach((link) => {
-    // Get the img element inside the anchor
-    const img = link.querySelector('img');
-    
-    // Get the current source and hover source
-    const currentSrc = img.src;
-    const hoverSrc = currentSrc.replace('.png', '-hover.png');
-    
-    // Add mouseenter event listener
-    link.addEventListener('mouseenter', () => {
-        // Change the img src to hover source
-        img.src = hoverSrc;
-    });
-    
-    // Add mouseleave event listener
-    link.addEventListener('mouseleave', () => {
-        // Check if the link has the 'selected' class
-        if (!link.classList.contains('selected')) {
-            // If not, change the img src back to the original source
-            img.src = currentSrc;
-        }
-    });
+		// Loop through each anchor element
+		logoLinks.forEach((link) => {
+			// Get the img element inside the anchor
+			const img = link.querySelector('img');
 
-    // Add click event listener
-    link.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the default link behavior
-        
-        // Remove 'selected' class from all logo links
-        logoLinks.forEach((logoLink) => {
-            logoLink.classList.remove('selected');
-        });
-        
-        // Add 'selected' class to the clicked link
-        link.classList.add('selected');
-        
-        // Remove the '-hover' suffix from the image source and keep it in hover state
-        img.src = hoverSrc;
+			// Get the current source and hover source
+			const currentSrc = img.src;
+			const hoverSrc = currentSrc.replace('.png', '-hover.png');
 
-        // Remove the '-hover' suffix from other logo links
-        logoLinks.forEach((logoLink) => {
-            if (logoLink !== link) {
-                const otherImg = logoLink.querySelector('img');
-                otherImg.src = otherImg.src.replace('-hover.png', '.png');
-            }
-        });
-    });
-});
+			// Add mouseenter event listener
+			link.addEventListener('mouseenter', () => {
+				// Change the img src to hover source
+				img.src = hoverSrc;
+			});
+
+			// Add mouseleave event listener
+			link.addEventListener('mouseleave', () => {
+				// Check if the link has the 'selected' class
+				if (!link.classList.contains('selected')) {
+					// If not, change the img src back to the original source
+					img.src = currentSrc;
+				}
+			});
+
+			// Add click event listener
+			link.addEventListener('click', (event) => {
+				event.preventDefault(); // Prevent the default link behavior
+
+				// Remove 'selected' class from all logo links
+				logoLinks.forEach((logoLink) => {
+					logoLink.classList.remove('selected');
+				});
+
+				// Add 'selected' class to the clicked link
+				link.classList.add('selected');
+
+				// Remove the '-hover' suffix from the image source and keep it in hover state
+				img.src = hoverSrc;
+
+				// Remove the '-hover' suffix from other logo links
+				logoLinks.forEach((logoLink) => {
+					if (logoLink !== link) {
+						const otherImg = logoLink.querySelector('img');
+						otherImg.src = otherImg.src.replace('-hover.png', '.png');
+					}
+				});
+			});
+		});
 
 	</script>
+
+	<script>
+		// Wait for the DOM content to be fully loaded
+		document.addEventListener("DOMContentLoaded", function () {
+		// Get the navigation bar element
+		var navbar = document.getElementById("navbar");
+	
+		// Function to update the background color based on scroll position
+		function updateNavbarBackground() {
+			// Set the background color based on the scroll position
+			navbar.style.background =
+			window.scrollY > 0 ? "#1d1e18ee" : "#1d1e1800";
+		}
+	
+		// Attach the function to the scroll event
+		window.addEventListener("scroll", updateNavbarBackground);
+	
+		// Initial call to set the initial background color
+		updateNavbarBackground();
+		});
+	</script>
+	
 
 </body>
 
