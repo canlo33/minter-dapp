@@ -574,12 +574,10 @@ a.full_link{
 	bottom: 0;
 	border-radius: 6px; 
 	border: 3px solid transparent;
-	background: -moz-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
-	background: -webkit-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
-	background: linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
-	-webkit-mask:
-	linear-gradient(#fff 0 0) padding-box, 
-	linear-gradient(#fff 0 0);
+	background: -moz-linear-gradient(45deg,orange,orangered,orange,orangered) border-box;
+	background: -webkit-linear-gradient(45deg,orange,orangered,orange,orangered) border-box;
+	background: linear-gradient(45deg,orange,orangered,orange,orangered) border-box;
+	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	-webkit-mask-composite: source-out;
 	mask-composite: exclude;
@@ -6494,9 +6492,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     bottom: 0;
     border-radius: 100%;
     border: 3px solid transparent;
-    background: -moz-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
-    background: -webkit-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
-    background: linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
+	background: -moz-linear-gradient(45deg,orange,orangered,orange,orangered) border-box;
+	background: -webkit-linear-gradient(45deg,orange,orangered,orange,orangered) border-box;
+	background: linear-gradient(45deg,orange,orangered,orange,orangered) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
 	-webkit-mask-composite: source-out;
@@ -6810,7 +6808,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     margin-left: 2rem;
     margin-right: 2rem;
     border-color: transparent;
-	background-color: #9b4aff;
+	background-color: orange;
     font-family: 'edo_szregular';
     padding: 1rem 3.5rem;
 	display: inline-block;
@@ -7022,6 +7020,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     justify-content: center;
 	margin: auto;
+	text-align: center;
 }
 
 .HowToMint {
