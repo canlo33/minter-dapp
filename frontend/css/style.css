@@ -6829,12 +6829,14 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     display: flex;
     flex-direction: column;
     align-items: center;
+	justify-content: center;
     width: 100%;
     background: #1d1e18ce;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
+	height: 100px;
 }
 
 .logos {
@@ -6857,6 +6859,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     transform: scale(0.85);
     height: auto;
     width: 140px;
+	text-decoration: none;
 }
 
 .logos .default:hover {
