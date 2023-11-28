@@ -39,7 +39,10 @@
 	<div class="gridBG">
 		<img src="img/bg/grid-Orange.png">
 	</div>
-	<img src="img/bg/try.png" style="width: 100vw; max-height: 92vh;">
+	<div style="position: relative;z-index: 99;">
+		<img id="hero-bg" src="img/bg/10.png" style="width: 100vw; max-height: 92vh;">
+	</div>
+	
 
 	<!-- Nav -->
 	<div class="sections">
@@ -631,6 +634,31 @@
 	<script type="text/javascript" src="js/init.js?ver=6.0"></script>
 	<!-- !Scripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+		// Get the image element
+		const heroBg = document.getElementById('hero-bg');
+	
+		// Array of image filenames
+		const imageArray = [
+			'10.png', '11.png', '12.png', '13.png', '14.png', '15.png', '16.png'
+		];
+	
+		// Initial index
+		let currentIndex = 0;
+	
+		// Function to change the image source
+		function changeImage() {
+			// Set the new image source
+			heroBg.src = 'img/bg/' + imageArray[currentIndex];
+	
+			// Increment the index
+			currentIndex = (currentIndex + 1) % imageArray.length;
+		}
+	
+		// Add a click event listener to the image
+		heroBg.addEventListener('click', changeImage);
+	</script>
 
 </body>
 
