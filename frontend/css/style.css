@@ -6804,17 +6804,17 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .wallet-btn {
-	border-radius: 5rem;
+    border-radius: 5rem;
     margin-left: 2rem;
     margin-right: 2rem;
     border-color: transparent;
-	background-color: orange;
+    background-color: orange;
     font-family: 'edo_szregular';
-    padding: 1rem 3.5rem;
-	display: inline-block;
+    padding: 0.75rem 2.5rem;
+    display: inline-block;
     color: white;
     font-weight: bold;
-    font-size: .75vw;
+    font-size: 1vw;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.3s ease;
