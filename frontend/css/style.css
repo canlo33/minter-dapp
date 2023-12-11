@@ -6814,7 +6814,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     display: inline-block;
     color: white;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 25px;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.3s ease;
