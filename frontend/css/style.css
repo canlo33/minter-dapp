@@ -6452,6 +6452,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	-ms-align-items: center;
 	align-items: center;
 }
+
+.fn_cs_accordion .acc_header .desc {
+	color: white;
+}
+
 .fn_cs_accordion .icon{
 	width: 40px;
 	height: 40px;
@@ -6465,7 +6470,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	content: '';
 	position: absolute;
 	display: block;
-	background-color: #8d898e;
+	background-color: white;
 	transition: all .3s ease;
 }
 .fn_cs_accordion .icon span:before{
@@ -6527,6 +6532,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .fn_cs_accordion .acc_content p{
 	margin: 0;
 	color: whitesmoke;
+    font-size: 17px;
+
 }
 
 
@@ -7047,6 +7054,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     transition: all 0.2s ease 0s;
     width: 15%;
+	min-width: 300px;
 }
 
 .HowToSteps .number{
@@ -7066,7 +7074,7 @@ input::-webkit-inner-spin-button {
 }
 
 .HowToSteps .img{
-	width: 100%;
+	height: 174px;
 	z-index: 9;
 }
 
