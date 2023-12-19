@@ -49,10 +49,6 @@ html{
 	flex-direction: column;
 	min-height: 100vh;
 }
-#footer{
-	margin-top: auto;
-}
-
 
 /* Preloader */
 .metaportal_fn_preloader{
@@ -2271,35 +2267,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #footer{
+	margin-top: auto;
 	padding: 34px 0 32px;
 	border-top: 1px solid rgba(255,255,255,.08);
-	background-color: rgb(10, 10, 10);
+	background-color: #1d1e18ce;
 }
 .footer{
 	display: -webkit-flex;
@@ -2307,7 +2279,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	-webkit-column-gap: 40px;
 	-moz-column-gap: 40px;
 	-o-column-gap: 40px;
@@ -2320,13 +2292,14 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-size: 16px;
 	font-family: var(--hff);
 	letter-spacing: 0;
+	color: white;
 }
 .footer p a{
-	color: #fff;
+	color: #0d6efd;
 	text-decoration: none;
 }
 .footer p a:hover{
-	color: var(--mc1);
+	color: #0d6efd;
 }
 .footer ul{
 	margin: 0;
@@ -2351,19 +2324,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 
-
-
-
-
-
-
-
 #contact{
 	padding: 144px 0 150px 0;
 }
-
-
-
 
 
 .fn_cs_contact_info{
@@ -3529,7 +3492,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	position: relative;
 	font-size: 16px;
 	text-transform: uppercase;
-	color: #000;
+	color: white;
 	letter-spacing: .5px;
 	font-family: var(--hff);
 	background-color: #56b201;
@@ -3595,8 +3558,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 100%;
 }
 .metaportal_fn_mintbox .mint_list h4{
-	font-size: 16px;
-	color: var(--bc);
+	font-size: 25px;
+	color: orange;
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
@@ -3610,7 +3573,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-size: 24px;
 	letter-spacing: 0;
 	font-weight: 400;
-	color: #ddd;
+	color: white;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -6812,24 +6775,27 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 .wallet-btn {
     border-radius: 5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+	margin: 0 2rem;
     border-color: transparent;
     background-color: orange;
     font-family: 'edo_szregular';
-    padding: 0.75rem 2.5rem;
     display: inline-block;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 20px;
+	letter-spacing: 0.05ch;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.3s ease;
     box-shadow: var(--header-shadow);
     cursor: pointer;
-    position: relative;
     text-decoration: none;
     outline: none;
+	position: fixed;
+    top: 16px;
+    right: 0;
+    z-index: 9999999;
+    padding: 1rem 2.5rem;
 }
 
 .sections {
@@ -6860,6 +6826,18 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     align-items: center;
     width: 100%;
     flex-grow: 1; /* Allow logo-group to grow and take available space */
+}
+
+@media only screen and (max-width: 1300px) {
+
+	.logo-group {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		flex-grow: 1; /* Allow logo-group to grow and take available space */
+	}
+
 }
 
 .logos .default {
@@ -6911,6 +6889,16 @@ a.metaportal_fn_videobutton:hover .fn__svg,
   .mint-qty > span {
 	display: flex;
   }
+
+  .mintInput{
+    display: inline-block;
+    text-align: center;
+    background: none;
+	width: 30px;
+    border: 0;
+    font-size: 24px;
+	color: white;
+  }
   
   .mint-btn {
 	display: inline-block;
@@ -6933,8 +6921,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     line-height: 1.22;
 	background: none;
 	border-radius: 2px;
-    border: 2px solid rgba(255,255,255,0.15);
-	padding: 0 10px;
+    border: 2px solid rgba(255,255,255,0.25);
+	padding: 0 20px;
+	margin-left: 10px;
   }
 
   .qty-btn {
@@ -6954,13 +6943,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'edo_szregular';
     line-height: 1.22;
 	background: none;
 	border-radius: 2px;
-    border: 2px solid rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.25);
 	border-radius: 50%;
-    padding: 0 0.125em;
+	padding: 0 5px;
   }
 
   input::-webkit-outer-spin-button,

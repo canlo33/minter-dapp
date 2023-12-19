@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="css/three-dots.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
-
-    <link type="text/css" rel="stylesheet" href="css/plugins.css?ver=6.0" />
-    <link type="text/css" rel="stylesheet" href="css/style.css?ver=6.0" />
+ 
+   
   </head>
   <body>
 
@@ -20,30 +19,25 @@
 		<div class="logos">
 			<div class="logo-group">
 				<a href="#story" class="default">
-					<img src="img/nav/story.png">
+					<h1 class="fn__maintitle medium" data-text="STORY" data-align="center" style="font-size: 33px;">STORY</h3>
 				</a>
-		
 				<a href="#art" class="default">
-					<img src="img/nav/art.png">
+					<h3 class="fn__maintitle medium" data-text="ART" data-align="center" style="font-size: 33px;">ART</h3>
 				</a>
-		
 				<a href="#faq" class="default">
-					<img src="img/nav/faq.png">
+					<h3 class="fn__maintitle medium" data-text="FAQ" data-align="center" style="font-size: 33px;">FAQ</h3>
 				</a>
-		
 				<a href="#roadmap" class="default">
-					<img src="img/nav/roadmap.png">
+					<h3 class="fn__maintitle medium" data-text="ROADMAP" data-align="center" style="font-size: 33px;">ROADMAP</h3>
 				</a>
-		
 				<a href="#socials" class="default">
-					<img src="img/nav/socials.png">
+					<h3 class="fn__maintitle medium" data-text="SOCIALS" data-align="center" style="font-size: 33px;">SOCIALS</h3>
 				</a>
-
 			</div>
 		</div>	
 	</div>
 
-<button class="wallet-btn" id="connectWallet" style="position: fixed; top: 40px; right: 0; z-index: 9999999;">Install MetaMask</button>
+<button class="wallet-btn" id="connectWallet">Install MetaMask</button>
 
     <div style="height:250px;"></div>
 
@@ -71,7 +65,7 @@
                   <div class="qnt">
                     <span>
                       <button class="qty-btn" id="mintDecrement">–</button>
-                      <input id="mintInput" class="mint-btn" type="number" value="1" min="1" max="5"  disabled>
+                      <input id="mintInput" class="mintInput" type="number" value="1" min="1" max="5" disabled="">
                       <button class="qty-btn" id="mintIncrement">+</button>
                     </span>
                     <button id="setQtyMax" class="mint-btn">SET MAX</button>
@@ -99,6 +93,19 @@
         </div>
       </div>
     </div>
+
+    		<!-- Footer -->
+        <footer id="footer" style="position: fixed;bottom: 0;padding: 34px 0 32px;width: 100%;">
+          <div class="container">
+            <div class="footer">
+              <div class="left_part">
+                <p>Copyright 2023 — Designed &amp; Developed by <a href="" target="_blank">Hold Up Society</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+		<!-- !Footer -->
     
     <script src="js/metamask-onboarding.bundle.js"></script>
     <script src="js/web3.min.js"></script>
