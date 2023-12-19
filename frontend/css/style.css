@@ -201,7 +201,6 @@ html{
 }
 body{
 	height: auto;
-	overflow-x: hidden;
 }
 html:after,
 html:before{
