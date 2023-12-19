@@ -533,6 +533,7 @@ a.full_link{
 	background-color: transparent;
 	outline: none;
 	outline-color: transparent;
+	cursor: pointer;
 }
 .metaportal_fn_button span{
 	position: relative;
