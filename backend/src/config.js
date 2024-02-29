@@ -74,7 +74,7 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "HUS Dec 22 Pre Reveal Description"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeiehni36o5z43pisfuvwha4givia7oygttklqzyqopyno3h5oqjdnu"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeibl2nn3f5yp3fwtthzfuqpqfxhughr35vowe6th4gjwxz4bwkdbt4"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {

@@ -6200,9 +6200,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     margin: auto;
 }
 .fn_cs_shortabout .about_right{
-    width: 40%;
-    max-width: calc(40% - 2px);
-    max-height: calc(40% - 2px);
+    width: 45%;
+    max-width: calc(45% - 2px);
+    max-height: calc(45% - 2px);
     margin: auto;
 }
 .fn_cs_shortabout .about_right:after{
